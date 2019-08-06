@@ -1,0 +1,12 @@
+{
+	"type": "range",
+	"radius": 60,
+	"affects": ["Unit"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 },
+		{ "value": "UnitMotion/Run/Speed", "multiply": 1.1 }
+	],
+	"auraName": "Civic Infrastructure",
+	"auraDescription": "Infrastructure built around this building makes traversing around easier. Nearby units move +10% faster",
+	"overlayIcon": "art/textures/ui/session/auras/mov_bonus.png"
+}

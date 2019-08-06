@@ -1,0 +1,11 @@
+{
+	"type": "range",
+	"radius": 20,
+	"affects": ["Military"],
+	"modifications": [
+		{ "value": "ProductionQueue/BatchTimeModifier", "add": -0.1 }
+	],
+	"auraName": "Military Training Time Bonus",
+	"auraDescription": "Soldiers train faster knowing they are not far from home. Nearby military bases train batches of soldiers +10% faster",
+	"overlayIcon": "art/textures/ui/session/auras/build_bonus.png"
+}

@@ -1,0 +1,11 @@
+{
+	"type": "range",
+	"radius": 30,
+	"affects": ["House"],
+	"modifications": [
+		{ "value": "Cost/PopulationBonus", "add": -1 }
+	],
+	"auraName": "Population Penalty",
+	"auraDescription": "Slaughtered livestocks, mines pollution, or market crowds. Nearby houses support -1 less population.",
+	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png"
+}

@@ -1,0 +1,11 @@
+{
+	"type": "range",
+	"radius": 30,
+	"affects": ["House"],
+	"modifications": [
+		{ "value": "Cost/PopulationBonus", "add": -2 }
+	],
+	"auraName": "Population Penalty",
+	"auraDescription": "Nobody wants to live near military installment. Nearby houses support -2 less population.",
+	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png"
+}

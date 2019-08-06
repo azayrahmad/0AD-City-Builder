@@ -1,0 +1,11 @@
+{
+	"type": "range",
+	"radius": 60,
+	"affects": ["House"],
+	"modifications": [
+		{ "value": "Cost/PopulationBonus", "add": 1 }
+	],
+	"auraName": "Population Bonus",
+	"auraDescription": "Getting fresh groceries from nearby market is a luxury. Nearby houses support +1 more population.",
+	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png"
+}

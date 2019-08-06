@@ -1,0 +1,11 @@
+{
+	"type": "range",
+	"radius": 60,
+	"affects": ["House"],
+	"modifications": [
+		{ "value": "Cost/PopulationBonus", "add": 3 }
+	],
+	"auraName": "Population Bonus",
+	"auraDescription": "Living near a wonder is a source of pride. Nearby houses support +3 more population",
+	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png"
+}
