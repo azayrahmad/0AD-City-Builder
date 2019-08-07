@@ -1,0 +1,12 @@
+{
+	"type": "range",
+	"radius": 20,
+	"affects": ["Worker"],
+	"modifications": [
+		{ "value": "ResourceGatherer/Capacities/food", "add": 1 }
+	],
+	"auraName": "Quick Shuttle",
+	"auraDescription": "Nearby workers can carry one more food",
+	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+	"stackable": "true"
+}

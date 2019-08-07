@@ -1,11 +1,11 @@
 {
 	"type": "range",
-	"radius": 40,
+	"radius": 20,
 	"affects": ["House"],
 	"modifications": [
 		{ "value": "Cost/PopulationBonus", "add": 1 }
 	],
-	"auraName": "Fresh Groceries",
+	"auraName": "Decorative Ornaments",
 	"auraDescription": "Nearby houses support +1 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
 	"stackable": "true"

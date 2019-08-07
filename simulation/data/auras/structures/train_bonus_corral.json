@@ -1,12 +1,12 @@
 {
 	"type": "range",
 	"radius": 30,
-	"affects": ["Military"],
+	"affects": ["Stable"],
 	"modifications": [
 		{ "value": "ProductionQueue/BatchTimeModifier", "add": -0.1 }
 	],
-	"auraName": "Weapon Supply",
-	"auraDescription": "Nearby military bases train batches of soldiers +10% faster",
+	"auraName": "Horse Supply",
+	"auraDescription": "Nearby stables train batches of cavalry +10% faster",
 	"overlayIcon": "art/textures/ui/session/auras/weapon_bonus.png",
 	"stackable": "true"
 }

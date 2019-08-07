@@ -1,0 +1,14 @@
+{
+	"type": "range",
+	"radius": 20,
+	"affects": ["Worker"],
+	"modifications": [
+		{ "value": "ResourceGatherer/Capacities/wood", "add": 1 },
+		{ "value": "ResourceGatherer/Capacities/stone", "add": 1 },
+		{ "value": "ResourceGatherer/Capacities/metal", "add": 1 }
+	],
+	"auraName": "Quick Shuttle",
+	"auraDescription": "Nearby workers can carry one more resources",
+	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+	"stackable": "true"
+}

@@ -5,7 +5,13 @@
 	"modifications": [
 		{ "value": "Cost/PopulationBonus", "add": 1 }
 	],
-	"auraName": "Population Bonus",
-	"auraDescription": "Residents prefer to live near each other. Nearby houses support +1 more population",
-	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png"
+	"auraName": "Neighborhood",
+	"auraDescription": "Nearby houses support +1 more population.",
+	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
+    "rangeOverlay" : {
+        "lineTexture": "outline_border.png",
+        "lineTextureMask": "outline_border_mask.png",
+        "lineThickness": 0.05
+    },
+	"stackable": "true"
 }
