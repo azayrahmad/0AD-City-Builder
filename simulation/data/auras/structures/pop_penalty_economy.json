@@ -9,5 +9,10 @@
 	"auraName": "Pollution",
 	"auraDescription": "Nearby houses support -1 less population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
 	"stackable": "true"
 }

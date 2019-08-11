@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_civic">
   <Auras datatype="tokens">
-    structures/pop_bonus_house
+    structures/pop_bonus_house_big
     structures/train_bonus_house
     structures/work_bonus_house
   </Auras>
@@ -14,18 +14,18 @@
   </Capturable>
   <Cost>
     <Population>0</Population>
-    <PopulationBonus>2</PopulationBonus>
+    <PopulationBonus>5</PopulationBonus>
     <BuildTime>30</BuildTime>
     <Resources>
-      <wood>75</wood>
+      <wood>150</wood>
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="13.0" depth="13.0"/>
+    <Square width="16.0" depth="16.0"/>
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>3</Max>
+    <Max>6</Max>
     <BuffHeal>0</BuffHeal>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
@@ -33,8 +33,8 @@
     <LoadingRange>1</LoadingRange>
   </GarrisonHolder>
   <Health>
-    <Max>800</Max>
-    <SpawnEntityOnDeath>decay|rubble/rubble_stone_2x2</SpawnEntityOnDeath>
+    <Max>1200</Max>
+    <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
   </Health>
   <Identity>
     <GenericName>House</GenericName>
@@ -42,8 +42,11 @@
     <VisibleClasses datatype="tokens">Village House</VisibleClasses>
     <Icon>structures/house.png</Icon>
   </Identity>
+  <Loot>
+    <wood>20</wood>
+  </Loot>
   <Obstruction>
-    <Static width="11.0" depth="11.0"/>
+    <Static width="14.0" depth="14.0"/>
   </Obstruction>
   <ProductionQueue>
     <BatchTimeModifier>1.0</BatchTimeModifier>
@@ -74,13 +77,13 @@
   </TerritoryDecay>
   <TerritoryInfluence>
     <Root>false</Root>
-    <Radius>16</Radius>
-    <Weight>65535</Weight>
+    <Radius>20</Radius>
+    <Weight>40000</Weight>
   </TerritoryInfluence>
   <Vision>
     <Range>20</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_2x2.xml</FoundationActor>
+    <FoundationActor>structures/fndn_3x3.xml</FoundationActor>
   </VisualActor>
 </Entity>

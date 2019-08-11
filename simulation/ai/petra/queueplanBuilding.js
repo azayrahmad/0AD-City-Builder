@@ -227,41 +227,32 @@ m.ConstructionPlan.prototype.findGoodPosition = function(gameState)
 				}
 				else if (template.hasClass("House"))
 				{
-					if (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("BarterMarket") 
-						|| ent.hasClass("SpecialBuilding") || ent.hasClass("Wonder")) 
+					if (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("BarterMarket") || ent.hasClass("Wonder")
+						|| (ent.hasClass("SpecialBuilding") && !ent.genericName() == "Rotary Mill")) 
 					{
-						placement.addInfluence(x, z, 60/cellSize, 20);    // houses are close to other houses
+						placement.addInfluence(x, z, 60/cellSize, 20);    // houses are close to civilian buildings
 						alreadyHasHouses = true;
 					}
-					else if (!ent.hasClass("StoneWall") || ent.hasClass("Gates") || ent.hasClass("Military"))
+					else if (!ent.hasClass("StoneWall") || ent.hasClass("Gates"))
 						placement.addInfluence(x, z, 60/cellSize, -40);   // and further away from other stuffs
 				}
-				else if (template.hasClass("Civic") || ent.hasClass("SpecialBuilding") || ent.hasClass("Wonder")) 
-				{
-					if (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("SpecialBuilding")) 
-					{
+				else if (template.hasClass("Civic") || template.hasClass("SpecialBuilding") || template.hasClass("Wonder")
+					&& (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("SpecialBuilding")))
 						placement.addInfluence(x, z, 60/cellSize, 30); 	  // civic buildings are close to other civic buildings and houses
-					}
-				}
 				else if (template.hasClass("Farmstead") && (!ent.hasClass("Field") && !ent.hasClass("Corral") &&
 					(!ent.hasClass("StoneWall") || ent.hasClass("Gates"))))
 					placement.addInfluence(x, z, 100/cellSize, -25);       // move farmsteads away to make room (StoneWall test needed for iber)
 				else if (template.hasClass("GarrisonFortress") && ent.hasClass("House"))
 					placement.addInfluence(x, z, 120/cellSize, -50);
-				else if (template.hasClass("Military") && !template.hasClass("Blacksmith"))
+				else if (template.hasClass("Military"))
 					placement.addInfluence(x, z, 40/cellSize, -40);
 				else if (template.genericName() == "Rotary Mill" && ent.hasClass("Field"))
 					placement.addInfluence(x, z, 60/cellSize, 40);
-				else if (template.hasClass("BarterMarket"))
-				{
-					if (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("Economy"))
+				else if (template.hasClass("BarterMarket") 
+					&& (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("Economy")))
+						placement.addInfluence(x, z, 60/cellSize, 30);
+				else if (template.hasClass("Blacksmith") && (ent.hasClass("Military") || ent.hasClass("Economy")))
 						placement.addInfluence(x, z, 60/cellSize, 40);
-				}
-				else if (template.hasClass("Blacksmith"))
-				{
-					if (ent.hasClass("Military") || ent.hasClass("Economy"))
-						placement.addInfluence(x, z, 60/cellSize, 40);
-				}
 			});
 		}
 		// if (template.hasClass("Farmstead"))

@@ -1,6 +1,6 @@
 {
 	"type": "range",
-	"radius": 20,
+	"radius": 25,
 	"affects": ["House"],
 	"modifications": [
 		{ "value": "Cost/PopulationBonus", "add": 1 }

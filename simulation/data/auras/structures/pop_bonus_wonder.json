@@ -8,5 +8,10 @@
 	"auraName": "Wonder Pride",
 	"auraDescription": "Nearby houses support +3 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
 	"stackable": "true"
 }

@@ -8,6 +8,11 @@
 	],
 	"auraName": "Home Spirit",
 	"auraDescription": "All workers build and gather +10% faster.",
-	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
+	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",    
+	"rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
 	"stackable": "true"
 }

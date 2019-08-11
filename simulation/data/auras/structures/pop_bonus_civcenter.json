@@ -3,10 +3,15 @@
 	"radius": 50,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 2 }
+		{ "value": "Cost/PopulationBonus", "multiply": 1.5 }
 	],
-	"auraName": "Civic Facilities",
-	"auraDescription": "Nearby houses support +2 more population.",
+	"auraName": "Heart of the City",
+	"auraDescription": "Nearby houses support +50% more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/meander.png",
+        "lineTextureMask": "overlay/meander_mask.png",
+        "lineThickness": 0.5
+    },
 	"stackable": "true"
 }
