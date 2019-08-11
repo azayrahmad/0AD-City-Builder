@@ -1,6 +1,6 @@
 {
 	"name": "city-building-mod",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"label": "City Building Mod - Aura",
 	"description": "Incorporate city-building/management elements to 0 A.D. using building aura effects.",
 	"dependencies": ["0ad=0.0.23"]
