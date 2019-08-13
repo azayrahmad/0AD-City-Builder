@@ -8,6 +8,7 @@
     <Category>Temple</Category>
   </BuildRestrictions>
   <Cost>
+	<Population>3</Population>
     <PopulationBonus>5</PopulationBonus>
     <BuildTime>200</BuildTime>
     <Resources>

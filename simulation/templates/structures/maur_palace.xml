@@ -4,6 +4,7 @@
     structures/pop_bonus_civic
   </Auras>
   <Cost>
+	<Population>4</Population>
     <PopulationBonus>10</PopulationBonus>
   </Cost>
   <Footprint>

@@ -5,6 +5,7 @@
   </Auras>
   <Cost>
     <BuildTime>200</BuildTime>
+	<Population>3</Population>
     <Resources>
       <wood>0</wood>
       <stone>200</stone>

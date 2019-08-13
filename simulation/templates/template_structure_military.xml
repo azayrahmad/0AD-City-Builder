@@ -13,6 +13,9 @@
   <Auras datatype="tokens">
     structures/pop_penalty_military
   </Auras>
+  <Cost>
+	<Population>3</Population>
+  </Cost>
   <Identity>
     <GenericName>Military Structure</GenericName>
     <VisibleClasses datatype="tokens">Military</VisibleClasses>

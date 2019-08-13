@@ -5,6 +5,7 @@
   </Auras>
   <Cost>
     <BuildTime>300</BuildTime>
+	<Population>3</Population>
     <PopulationBonus>10</PopulationBonus>
     <Resources>
       <food>0</food>

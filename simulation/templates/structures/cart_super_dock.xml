@@ -17,6 +17,7 @@
     <GarrisonRegenRate>10</GarrisonRegenRate>
   </Capturable>
   <Cost>
+	<Population>5</Population>
     <PopulationBonus>10</PopulationBonus>
     <BuildTime>500</BuildTime>
     <Resources>

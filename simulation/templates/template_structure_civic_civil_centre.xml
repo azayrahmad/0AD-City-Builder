@@ -57,6 +57,7 @@
     <RegenRate>5.0</RegenRate>
   </Capturable>
   <Cost>
+	<Population>5</Population>
     <PopulationBonus>20</PopulationBonus>
     <BuildTime>500</BuildTime>
     <Resources>
