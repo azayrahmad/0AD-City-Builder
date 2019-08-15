@@ -37,6 +37,7 @@
     <CapturePoints>1200</CapturePoints>
   </Capturable>
   <Cost>
+    <Population>0</Population>
     <BuildTime>80</BuildTime>
     <Resources>
       <stone>90</stone>

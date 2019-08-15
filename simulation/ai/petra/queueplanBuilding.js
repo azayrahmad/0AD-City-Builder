@@ -227,14 +227,18 @@ m.ConstructionPlan.prototype.findGoodPosition = function(gameState)
 				}
 				else if (template.hasClass("House"))
 				{
-					if (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("BarterMarket") || ent.hasClass("Wonder")
-						|| (ent.hasClass("SpecialBuilding") && !ent.genericName() == "Rotary Mill")) 
+					if (ent.hasClass("House")) 
 					{
 						placement.addInfluence(x, z, 60/cellSize, 20);    // houses are close to civilian buildings
 						alreadyHasHouses = true;
 					}
+					else if (ent.hasClass("Civic") || ent.hasClass("BarterMarket") 
+						|| (ent.hasClass("SpecialBuilding") && !ent.genericName() == "Rotary Mill"))
+						placement.addInfluence(x, z, 60/cellSize, 20);
 					else if (!ent.hasClass("StoneWall") || ent.hasClass("Gates"))
 						placement.addInfluence(x, z, 60/cellSize, -40);   // and further away from other stuffs
+					if (ent.hasClass("CivCentre")|| ent.hasClass("Wonder"))
+						placement.addInfluence(x, z, 60/cellSize, 20);
 				}
 				else if (template.hasClass("Civic") || template.hasClass("SpecialBuilding") || template.hasClass("Wonder")
 					&& (ent.hasClass("House") || ent.hasClass("Civic") || ent.hasClass("SpecialBuilding")))
