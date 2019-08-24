@@ -1,0 +1,17 @@
+{
+	"type": "range",
+	"radius": 50,
+	"affects": ["BarterMarket"],
+	"modifications": [
+		{ "value": "ResourceTrickle/Rates/coin", "add": -1 }
+	],
+	"auraName": "Market Rivalry",
+	"auraDescription": "Nearby market pay -1 less taxes.",
+	"overlayIcon": "art/textures/ui/session/auras/coin_penalty.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+	"stackable": "true"
+}

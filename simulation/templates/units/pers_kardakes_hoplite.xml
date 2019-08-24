@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_champion_infantry_spearman_hoplite">
+  <Cost>
+    <Resources>
+      <food>0</food>
+      <metal op="mul">2</metal>
+      <coin op="mul">2.5</coin>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Civ>pers</Civ>
+    <GenericName>Cardaces Hoplite</GenericName>
+    <SpecificName>Hoplites Kardakes</SpecificName>
+    <Icon>units/pers_kardakes.png</Icon>
+    <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
+  </Identity>
+  <ResourceTrickle>
+	<Rates>
+      <coin>-2</coin>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
+  <VisualActor>
+    <Actor>units/persians/infantry_spearman_c3.xml</Actor>
+  </VisualActor>
+</Entity>

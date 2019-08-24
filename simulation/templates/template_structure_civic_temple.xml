@@ -13,6 +13,7 @@
     <BuildTime>200</BuildTime>
     <Resources>
       <stone>300</stone>
+      <coin>200</coin>
     </Resources>
   </Cost>
   <Footprint>

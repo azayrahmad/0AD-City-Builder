@@ -33,7 +33,8 @@
       <wood>0</wood>
       <stone>0</stone>
       <metal>0</metal>
-    </Resources>
+      <coin>20</coin> 
+  </Resources>
   </Cost>
   <Decay>
     <Active>false</Active>
@@ -66,6 +67,7 @@
     <wood>10</wood>
     <stone>0</stone>
     <metal>0</metal>
+    <coin>50</coin>
   </Loot>
   <Minimap>
     <Type>structure</Type>
@@ -87,6 +89,7 @@
       <wood>1.0</wood>
       <stone>1.0</stone>
       <metal>1.0</metal>
+      <coin>1.0</coin>
       <time>1.0</time>
     </TechCostMultiplier>
   </ProductionQueue>
@@ -106,6 +109,13 @@
   <Repairable>
     <RepairTimeRatio>2.0</RepairTimeRatio>
   </Repairable>
+  <ResourceTrickle>
+    <Rates>
+      <wood>-1</wood>
+      <coin>-1</coin>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
   <Selectable>
     <Overlay>
       <Outline>

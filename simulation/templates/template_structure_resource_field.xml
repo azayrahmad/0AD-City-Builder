@@ -50,6 +50,12 @@
     <MaxGatherers>5</MaxGatherers>
     <DiminishingReturns>0.90</DiminishingReturns>
   </ResourceSupply>
+  <ResourceTrickle>
+    <Rates>
+      <coin>0.0</coin>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_field.xml</select>

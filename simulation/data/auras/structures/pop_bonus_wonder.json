@@ -3,10 +3,11 @@
 	"radius": 60,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 3 }
+		{ "value": "Cost/PopulationBonus", "add": 3 },
+		{ "value": "ResourceTrickle/Rates/coin", "add": 3 }
 	],
 	"auraName": "Wonder Pride",
-	"auraDescription": "Nearby houses support +3 more population.",
+	"auraDescription": "Nearby houses support +3 more population and pay +3 more taxes.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",

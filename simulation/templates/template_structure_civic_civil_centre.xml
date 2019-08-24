@@ -65,6 +65,7 @@
       <wood>500</wood>
       <stone>500</stone>
       <metal>500</metal>
+      <coin>750</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -96,6 +97,7 @@
     <wood>200</wood>
     <stone>200</stone>
     <metal>200</metal>
+    <coin>200</coin> 
   </Loot>
   <Obstruction>
     <Static width="30.0" depth="30.0"/>
@@ -116,6 +118,12 @@
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
   </ResourceDropsite>
+  <ResourceTrickle>
+    <Rates>
+      <coin>0.0</coin>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_civ_center.xml</select>

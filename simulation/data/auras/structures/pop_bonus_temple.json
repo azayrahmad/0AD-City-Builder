@@ -3,10 +3,11 @@
 	"radius": 40,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 2 }
+		{ "value": "Cost/PopulationBonus", "add": 2 },
+		{ "value": "ResourceTrickle/Rates/coin", "add": 2 }
 	],
 	"auraName": "Blessings",
-	"auraDescription": "Nearby houses support +2 more population.",
+	"auraDescription": "Nearby houses support +2 more population and pay +2 more taxes.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",
