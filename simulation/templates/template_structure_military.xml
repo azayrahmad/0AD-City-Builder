@@ -15,9 +15,18 @@
   </Auras>
   <Cost>
 	<Population>3</Population>
+	<Resources>
+      <coin>150</coin>
+	</Resources>
   </Cost>
   <Identity>
     <GenericName>Military Structure</GenericName>
     <VisibleClasses datatype="tokens">Military</VisibleClasses>
   </Identity>
+  <ResourceTrickle>
+    <Rates>
+      <coin>-2.0</coin>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
 </Entity>

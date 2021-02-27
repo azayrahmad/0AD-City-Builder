@@ -83,6 +83,11 @@
   <Repairable>
     <RepairTimeRatio>4.5</RepairTimeRatio>
   </Repairable>
+  <ResourceTrickle>
+    <Rates>
+      <coin>0.0</coin>
+    </Rates>
+  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_tower.xml</select>

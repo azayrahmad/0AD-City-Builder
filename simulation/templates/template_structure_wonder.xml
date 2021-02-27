@@ -29,6 +29,7 @@
       <wood>1000</wood>
       <stone>1000</stone>
       <metal>1000</metal>
+      <coin>2000</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -60,6 +61,7 @@
     <wood>300</wood>
     <stone>300</stone>
     <metal>300</metal>
+    <coin>300</coin>
   </Loot>
   <Obstruction>
     <Static width="30.0" depth="30.0"/>
@@ -76,6 +78,7 @@
       <wood>1.0</wood>
       <stone>1.0</stone>
       <metal>1.0</metal>
+      <coin>-1.0</coin>
     </Rates>
     <Interval>2000</Interval>
   </ResourceTrickle>

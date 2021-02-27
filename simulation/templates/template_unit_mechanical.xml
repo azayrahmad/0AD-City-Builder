@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit">  
+  <Cost>
+    <Resources>
+      <coin>125</coin>
+    </Resources>
+  </Cost>
+  <Decay>
+    <DelayTime>0.0</DelayTime>
+    <SinkRate>0.0</SinkRate>
+    <SinkAccel>2.0</SinkAccel>
+  </Decay>
+  <Health>
+    <Unhealable>true</Unhealable>
+  </Health>
+  <Identity>
+    <GenericName>Mechanical</GenericName>
+    <VisibleClasses datatype="tokens">Mechanical</VisibleClasses>
+  </Identity>
+  <Loot>
+    <xp>60</xp>
+    <food>0</food>
+    <wood>50</wood>
+    <stone>0</stone>
+    <metal>25</metal>
+    <coin>50</coin>
+  </Loot>
+  <Repairable>
+    <RepairTimeRatio>4.0</RepairTimeRatio>
+  </Repairable>
+  <ResourceTrickle>
+	<Rates>
+      <food>-3</food>
+    </Rates>
+    <Interval>10000</Interval>
+  </ResourceTrickle>
+</Entity>

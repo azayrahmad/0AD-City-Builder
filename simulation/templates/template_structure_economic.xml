@@ -18,4 +18,7 @@
     <GenericName>Economic Structure</GenericName>
     <VisibleClasses datatype="tokens">Economic</VisibleClasses>
   </Identity>
+  <Loot>
+    <coin>100</coin>
+  </Loot>
 </Entity>

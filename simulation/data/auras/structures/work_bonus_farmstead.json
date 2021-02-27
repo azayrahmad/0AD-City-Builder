@@ -7,7 +7,7 @@
 	],
 	"auraName": "Quick Shuttle",
 	"auraDescription": "Nearby workers can carry one more food",
-	"overlayIcon": "art/textures/ui/session/auras/food_bonus.png",
+	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",

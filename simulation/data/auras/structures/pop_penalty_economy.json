@@ -1,13 +1,14 @@
 {
 	"type": "range",
-	"radius": 20,
+	"radius": 30,
 	"affects": ["House"],
 	"affectedPlayers": ["Enemy", "Player"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": -1 }
+		{ "value": "Cost/PopulationBonus", "add": -1 },
+		{ "value": "ResourceTrickle/Rates/coin", "add": -1 }
 	],
 	"auraName": "Pollution",
-	"auraDescription": "Nearby houses support -1 less population.",
+	"auraDescription": "Nearby houses support -1 less population and pay -1 less taxes.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",
