@@ -8,7 +8,6 @@
   </AlertRaiser>
   <Auras datatype="tokens">
     structures/pop_bonus_market
-	structures/tax_penalty_market
   </Auras>
   <BuildRestrictions>
     <Category>Market</Category>
@@ -18,7 +17,6 @@
     <BuildTime>150</BuildTime>
     <Resources>
       <wood>300</wood>
-      <coin>200</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -65,12 +63,6 @@
       units/{civ}_support_trader
     </Entities>
   </ProductionQueue>
-  <ResourceTrickle>
-    <Rates>
-      <coin>3.0</coin>
-    </Rates>
-    <Interval>10000</Interval>
-  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_market.xml</select>

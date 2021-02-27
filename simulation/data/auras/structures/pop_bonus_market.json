@@ -1,13 +1,12 @@
 {
 	"type": "range",
-	"radius": 50,
+	"radius": 40,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 1 },
-		{ "value": "ResourceTrickle/Rates/coin", "add": 1 }
+		{ "value": "Cost/PopulationBonus", "add": 1 }
 	],
 	"auraName": "Fresh Groceries",
-	"auraDescription": "Nearby houses support +1 more population and pay +1 more taxes.",
+	"auraDescription": "Nearby houses support +1 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",
