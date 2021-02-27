@@ -1,7 +1,7 @@
 {
 	"name": "city-building-mod",
-	"version": "0.2.0",
-	"label": "City Building Mod",
-	"description": "Incorporate city-building/management elements to 0 A.D.. Desirability and coin resource.",
+	"version": "0.1.2",
+	"label": "City Building Mod - Aura",
+	"description": "Incorporate city-building/management elements to 0 A.D. using building aura effects.",
 	"dependencies": ["0ad=0.0.23"]
 }
