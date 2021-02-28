@@ -19,28 +19,27 @@
       <metal>200</metal>
     </Resources>
   </Cost>
-  <Footprint>
-    <Square width="25.0" depth="25.0"/>
-    <Height>12.0</Height>
-  </Footprint>
   <Health>
     <Max>2000</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_5x5</SpawnEntityOnDeath>
   </Health>
   <Identity>
     <GenericName>Military Colony</GenericName>
-    <SpecificName>Klēroukhía</SpecificName>
-    <Classes datatype="tokens">Colony</Classes>
+    <SelectionGroupName>template_structure_civic_civil_centre_military_colony</SelectionGroupName>
+    <VisibleClasses datatype="tokens">Colony</VisibleClasses>
     <Icon>structures/military_settlement.png</Icon>
     <RequiredTechnology>phase_town</RequiredTechnology>
   </Identity>
-  <Obstruction>
-    <Static width="23.0" depth="23.0"/>
-  </Obstruction>
+  <Loot>
+    <wood>40</wood>
+    <stone>40</stone>
+    <metal>40</metal>
+  </Loot>
   <ProductionQueue>
     <Technologies datatype="tokens">
       -phase_town_{civ}
       -phase_city_{civ}
+      -hellenistic_metropolis
       upgrade_rank_advanced_mercenary
     </Technologies>
   </ProductionQueue>
@@ -48,12 +47,8 @@
     <SoundGroups>
       <select>interface/select/building/sel_gymnasium.xml</select>
       <constructed>interface/complete/building/complete_gymnasium.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
     </SoundGroups>
   </Sound>
-  <TerritoryDecay>
-    <DecayRate>1</DecayRate>
-  </TerritoryDecay>
   <TerritoryInfluence>
     <Radius>80</Radius>
   </TerritoryInfluence>

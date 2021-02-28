@@ -2,36 +2,34 @@
 <Entity parent="template_structure_civic">
   <AlertRaiser>
     <List datatype="tokens">FemaleCitizen</List>
-    <RaiseAlertRange>140</RaiseAlertRange>
-    <EndOfAlertRange>190</EndOfAlertRange>
+    <RaiseAlertRange>120</RaiseAlertRange>
+    <EndOfAlertRange>180</EndOfAlertRange>
     <SearchRange>100</SearchRange>
   </AlertRaiser>
-  <Armour>
-    <Hack op="add">5</Hack>
-    <Pierce op="add">5</Pierce>
-    <Foundation>
-      <Hack>5</Hack>
-      <Pierce>15</Pierce>
-      <Crush>3</Crush>
-    </Foundation>
-  </Armour>  
   <Auras datatype="tokens">
-	structures/mov_bonus_civic
-	structures/pop_bonus_civcenter
+    structures/mov_bonus_civic
+    structures/pop_bonus_civcenter
   </Auras>
   <Attack>
     <Ranged>
-      <Hack>0.0</Hack>
-      <Pierce>12.0</Pierce>
-      <Crush>0.0</Crush>
-      <MaxRange>72.0</MaxRange>
-      <MinRange>0.0</MinRange>
-      <ProjectileSpeed>75.0</ProjectileSpeed>
-      <Gravity>9.81</Gravity>
+      <AttackName>Bow</AttackName>
+      <Damage>
+        <Hack>0</Hack>
+        <Pierce>12</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+      <MaxRange>60</MaxRange>
+      <MinRange>0</MinRange>
       <PrepareTime>1200</PrepareTime>
       <RepeatTime>2000</RepeatTime>
-      <Spread>1.5</Spread>
       <Delay>0</Delay>
+      <Projectile>
+        <Speed>100.0</Speed>
+        <Spread>1.5</Spread>
+        <Gravity>50.0</Gravity>
+        <FriendlyFire>false</FriendlyFire>
+        <LaunchPoint y="3"/>
+      </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
       <RangeOverlay>
         <LineTexture>outline_border.png</LineTexture>
@@ -43,6 +41,7 @@
   <BuildingAI>
     <DefaultArrowCount>3</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
   </BuildingAI>
   <BuildRestrictions>
     <Territory>own neutral</Territory>
@@ -57,15 +56,12 @@
     <RegenRate>5.0</RegenRate>
   </Capturable>
   <Cost>
-	<Population>5</Population>
-    <PopulationBonus>20</PopulationBonus>
+    <Population>5</Population>
     <BuildTime>500</BuildTime>
     <Resources>
-      <food>0</food>
       <wood>500</wood>
       <stone>500</stone>
       <metal>500</metal>
-      <coin>750</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -86,51 +82,66 @@
   </Health>
   <Identity>
     <GenericName>Civic Center</GenericName>
-    <Tooltip>Build to acquire large tracts of territory. Train citizens.</Tooltip>
-    <Classes datatype="tokens">Defensive CivCentre</Classes>
-    <VisibleClasses datatype="tokens">CivilCentre</VisibleClasses>
+    <SelectionGroupName>template_structure_civic_civil_centre</SelectionGroupName>
+    <Tooltip>Build in own or neutral territory. Acquire large tracts of territory. Territory root. Train Citizens and research technologies. Garrison Soldiers for additional arrows.</Tooltip>
+    <Classes datatype="tokens">CivCentre</Classes>
+    <VisibleClasses datatype="tokens">Defensive CivilCentre</VisibleClasses>
     <Icon>structures/civic_centre.png</Icon>
   </Identity>
   <Loot>
-    <xp>200</xp>
-    <food>0</food>
-    <wood>200</wood>
-    <stone>200</stone>
-    <metal>200</metal>
-    <coin>200</coin> 
+    <wood>100</wood>
+    <stone>100</stone>
+    <metal>100</metal>
   </Loot>
   <Obstruction>
     <Static width="30.0" depth="30.0"/>
   </Obstruction>
+  <Population>
+    <Bonus>20</Bonus>
+  </Population>
   <ProductionQueue>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}_support_female_citizen
+      units/{civ}/support_female_citizen
     </Entities>
     <Technologies datatype="tokens">
       phase_town_{civ}
       phase_city_{civ}
+      unlock_shared_los
+      unlock_shared_dropsites
       unlock_spies
       spy_counter
+      archery_tradition
+      hellenistic_metropolis
     </Technologies>
   </ProductionQueue>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">5</Hack>
+        <Pierce op="add">5</Pierce>
+      </Damage>
+    </Entity>
+    <Foundation>
+      <Damage>
+        <Hack>5</Hack>
+        <Pierce>15</Pierce>
+        <Crush>3</Crush>
+      </Damage>
+    </Foundation>
+  </Resistance>
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
   </ResourceDropsite>
-  <ResourceTrickle>
-    <Rates>
-      <coin>0.0</coin>
-    </Rates>
-    <Interval>10000</Interval>
-  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_civ_center.xml</select>
       <constructed>interface/complete/building/complete_civ_center.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
       <alert_raise>interface/alarm/alarm_alert_0.xml</alert_raise>
       <alert_end>interface/alarm/alarm_alert_1.xml</alert_end>
+      <attack_ranged>attack/weapon/bow_attack.xml</attack_ranged>
+      <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>
     </SoundGroups>
   </Sound>
   <TerritoryInfluence>
@@ -142,6 +153,6 @@
     <Range>90</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_6x6.xml</FoundationActor>
+    <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
   </VisualActor>
 </Entity>

@@ -6,7 +6,7 @@
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 },
 		{ "value": "UnitMotion/Run/Speed", "multiply": 1.1 }
 	],
-	"auraName": "City Infrastructure",
+	"auraName": "Infrastructure",
 	"auraDescription": "Nearby units move +10% faster",
 	"overlayIcon": "art/textures/ui/session/auras/mov_bonus.png",
     "rangeOverlay" : {

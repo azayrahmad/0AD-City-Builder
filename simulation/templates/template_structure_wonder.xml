@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure">
-  <Armour>
-    <Hack>15</Hack>
-    <Pierce>25</Pierce>
-    <Crush>3</Crush>
-    <Foundation>
-      <Hack>2</Hack>
-      <Pierce>10</Pierce>
-      <Crush>2</Crush>
-    </Foundation>
-  </Armour>
   <Auras datatype="tokens">
-    structures/wonder_pop_1
-    structures/wonder_pop_2
-	structures/pop_bonus_wonder
+    structures/wonder_population_cap
+    structures/pop_bonus_wonder
   </Auras>
   <BuildRestrictions>
     <Category>Wonder</Category>
@@ -25,11 +14,9 @@
   <Cost>
     <BuildTime>1000</BuildTime>
     <Resources>
-      <food>1000</food>
       <wood>1000</wood>
-      <stone>1000</stone>
+      <stone>1500</stone>
       <metal>1000</metal>
-      <coin>2000</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -37,11 +24,11 @@
     <Height>10.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>30</Max>
+    <Max>50</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support Infantry Cavalry</List>
-    <BuffHeal>1</BuffHeal>
+    <List datatype="tokens">Support Soldier</List>
+    <BuffHeal>5</BuffHeal>
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
   <Health>
@@ -50,35 +37,48 @@
   </Health>
   <Identity>
     <GenericName>Wonder</GenericName>
+    <SelectionGroupName>template_structure_wonder</SelectionGroupName>
     <Tooltip>Bring glory to your civilization and add large tracts of land to your empire.</Tooltip>
+    <Classes datatype="tokens">ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">City Wonder</VisibleClasses>
     <Icon>structures/wonder.png</Icon>
     <RequiredTechnology>phase_city</RequiredTechnology>
   </Identity>
   <Loot>
-    <xp>300</xp>
-    <food>300</food>
-    <wood>300</wood>
+    <wood>200</wood>
     <stone>300</stone>
-    <metal>300</metal>
-    <coin>300</coin>
+    <metal>200</metal>
   </Loot>
   <Obstruction>
     <Static width="30.0" depth="30.0"/>
   </Obstruction>
   <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
     <Technologies datatype="tokens">
-      pop_wonder
+      wonder_population_cap
     </Technologies>
   </ProductionQueue>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>15</Hack>
+        <Pierce>25</Pierce>
+        <Crush>3</Crush>
+      </Damage>
+    </Entity>
+    <Foundation>
+      <Damage>
+        <Hack>2</Hack>
+        <Pierce>10</Pierce>
+        <Crush>2</Crush>
+      </Damage>
+    </Foundation>
+  </Resistance>
   <ResourceTrickle>
     <Rates>
       <food>1.0</food>
       <wood>1.0</wood>
       <stone>1.0</stone>
       <metal>1.0</metal>
-      <coin>-1.0</coin>
     </Rates>
     <Interval>2000</Interval>
   </ResourceTrickle>
@@ -86,14 +86,8 @@
     <SoundGroups>
       <select>interface/select/building/sel_wonder.xml</select>
       <constructed>interface/complete/building/complete_wonder.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
     </SoundGroups>
   </Sound>
-  <StatusBars>
-    <BarWidth>6.0</BarWidth>
-    <BarHeight>0.6</BarHeight>
-    <HeightOffset>12.0</HeightOffset>
-  </StatusBars>
   <TerritoryInfluence>
     <Root>true</Root>
     <Radius>100</Radius>
@@ -103,7 +97,7 @@
     <Range>72</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_6x6.xml</FoundationActor>
+    <FoundationActor>structures/fndn_9x9.xml</FoundationActor>
   </VisualActor>
   <Wonder/>
 </Entity>

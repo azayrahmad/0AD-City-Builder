@@ -3,23 +3,17 @@
   <Auras datatype="tokens">
     structures/pop_bonus_house
     structures/train_bonus_house
-    structures/work_bonus_house    
-	structures/tax_bonus_house
+    structures/work_bonus_house
   </Auras>
-  <BuildRestrictions>
-    <Category>House</Category>
-  </BuildRestrictions>
   <Capturable>
     <CapturePoints>300</CapturePoints>
     <GarrisonRegenRate>4.0</GarrisonRegenRate>
   </Capturable>
   <Cost>
     <Population>0</Population>
-    <PopulationBonus>2</PopulationBonus>
     <BuildTime>30</BuildTime>
     <Resources>
       <wood>75</wood>
-      <coin>25</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -40,20 +34,23 @@
   </Health>
   <Identity>
     <GenericName>House</GenericName>
-    <Tooltip>Increase the population limit.</Tooltip>
+    <SelectionGroupName>template_structure_civic_house</SelectionGroupName>
     <VisibleClasses datatype="tokens">Village House</VisibleClasses>
     <Icon>structures/house.png</Icon>
+    <RequiredTechnology>phase_village</RequiredTechnology>
   </Identity>
   <Loot>
-    <coin>50</coin>
+    <wood>15</wood>
   </Loot>
   <Obstruction>
     <Static width="11.0" depth="11.0"/>
   </Obstruction>
+  <Population>
+    <Bonus>2</Bonus>
+  </Population>
   <ProductionQueue>
-    <BatchTimeModifier>1.0</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}_support_female_citizen_house
+      units/{civ}/support_female_citizen_house
     </Entities>
     <Technologies datatype="tokens">
       health_females_01
@@ -62,22 +59,13 @@
       unlock_females_house
     </Technologies>
   </ProductionQueue>
-  <ResourceTrickle>
-    <Rates>
-      <coin>2.0</coin>
-    </Rates>
-    <Interval>10000</Interval>
-  </ResourceTrickle>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_house.xml</select>
       <constructed>interface/complete/building/complete_house.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
     </SoundGroups>
   </Sound>
   <StatusBars>
-    <BarWidth>6.0</BarWidth>
-    <BarHeight>0.6</BarHeight>
     <HeightOffset>8.0</HeightOffset>
   </StatusBars>
   <TerritoryDecay>
@@ -92,6 +80,6 @@
     <Range>20</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_2x2.xml</FoundationActor>
+    <FoundationActor>structures/fndn_3x3.xml</FoundationActor>
   </VisualActor>
 </Entity>

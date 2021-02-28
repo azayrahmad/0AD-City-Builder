@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_civic">
   <Auras datatype="tokens">
-  	structures/pop_bonus_civic
+    structures/pop_bonus_civic
     structures/temple_heal
   </Auras>
-  <BuildRestrictions>
-    <Category>Temple</Category>
-  </BuildRestrictions>
   <Cost>
-	<Population>3</Population>
-    <PopulationBonus>5</PopulationBonus>
+    <Population>3</Population>
     <BuildTime>200</BuildTime>
     <Resources>
       <stone>300</stone>
-      <coin>200</coin>
     </Resources>
   </Cost>
   <Footprint>
@@ -34,14 +29,14 @@
   </Health>
   <Identity>
     <GenericName>Temple</GenericName>
-    <Tooltip>Train healers. Garrison units to heal them at a quick rate (3 HP per second). Research healing and religious improvements.</Tooltip>
+    <SelectionGroupName>template_structure_civic_temple</SelectionGroupName>
+    <Tooltip>Train Healers and research healing technologies.</Tooltip>
     <VisibleClasses datatype="tokens">Town Temple</VisibleClasses>
     <Icon>structures/temple.png</Icon>
     <RequiredTechnology>phase_town</RequiredTechnology>
   </Identity>
   <Loot>
-    <stone>50</stone>
-    <metal>50</metal>
+    <stone>60</stone>
   </Loot>
   <Obstruction>
     <Static width="17.5" depth="30.0"/>
@@ -49,14 +44,14 @@
   <ProductionQueue>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}_support_healer_b
+      units/{civ}/support_healer_b
     </Entities>
     <Technologies datatype="tokens">
       heal_range
       heal_range_2
       heal_rate
       heal_rate_2
-      heal_temple
+      garrison_heal
       health_regen_units
     </Technologies>
   </ProductionQueue>
@@ -64,7 +59,6 @@
     <SoundGroups>
       <select>interface/select/building/sel_temple.xml</select>
       <constructed>interface/complete/building/complete_temple.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
     </SoundGroups>
   </Sound>
   <TerritoryInfluence>

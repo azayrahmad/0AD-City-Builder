@@ -2,16 +2,13 @@
 <Entity parent="template_structure_economic">
   <AlertRaiser>
     <List datatype="tokens">FemaleCitizen</List>
-    <RaiseAlertRange>60</RaiseAlertRange>
+    <RaiseAlertRange>50</RaiseAlertRange>
     <EndOfAlertRange>100</EndOfAlertRange>
     <SearchRange>100</SearchRange>
-  </AlertRaiser> 
+  </AlertRaiser>  
   <Auras datatype="tokens">
-	structures/work_bonus_farmstead
+    structures/work_bonus_farmstead
   </Auras>
-  <BuildRestrictions>
-    <Category>Farmstead</Category>
-  </BuildRestrictions>
   <Capturable>
     <CapturePoints>300</CapturePoints>
   </Capturable>
@@ -29,22 +26,24 @@
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_4x4</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <Classes datatype="tokens">DropsiteFood</Classes>
     <GenericName>Farmstead</GenericName>
-    <Icon>structures/farmstead.png</Icon>
-    <Tooltip>Dropsite for the food resource. Research food gathering improvements.</Tooltip>
+    <SelectionGroupName>template_structure_economic_farmstead</SelectionGroupName>
+    <Tooltip>Research food gathering technologies.</Tooltip>
+    <Classes datatype="tokens">DropsiteFood</Classes>
     <VisibleClasses datatype="tokens">Village Farmstead</VisibleClasses>
+    <Icon>structures/farmstead.png</Icon>
+    <RequiredTechnology>phase_village</RequiredTechnology>
   </Identity>
   <Loot>
-    <food>100</food>
+    <wood>20</wood>
   </Loot>
   <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
     <Technologies datatype="tokens">
       gather_wicker_baskets
       gather_farming_plows
       gather_farming_training
       gather_farming_fertilizer
+      gather_farming_harvester
     </Technologies>
   </ProductionQueue>
   <RallyPoint disable=""/>
@@ -56,7 +55,6 @@
     <SoundGroups>
       <select>interface/select/building/sel_farmstead.xml</select>
       <constructed>interface/complete/building/complete_farmstead.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
       <alert_raise>interface/alarm/alarm_alert_0.xml</alert_raise>
       <alert_end>interface/alarm/alarm_alert_1.xml</alert_end>
     </SoundGroups>
@@ -70,6 +68,6 @@
     <Range>20</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_4x4.xml</FoundationActor>
+    <FoundationActor>structures/fndn_5x5.xml</FoundationActor>
   </VisualActor>
 </Entity>

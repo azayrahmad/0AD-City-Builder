@@ -3,11 +3,10 @@
 	"radius": 20,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 1 },
-		{ "value": "ResourceTrickle/Rates/coin", "add": 1 }
+		{ "value": "Cost/PopulationBonus", "add": 1 }
 	],
-	"auraName": "Decorative Ornaments",
-	"auraDescription": "Nearby houses support +1 more population and pay +1 more taxes.",
+	"auraName": "Monument",
+	"auraDescription": "Nearby houses support +1 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",

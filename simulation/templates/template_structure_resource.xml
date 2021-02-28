@@ -3,25 +3,24 @@
   <Auras datatype="tokens">
     structures/pop_penalty_economy
   </Auras>
-  <Armour>
-    <Hack>1</Hack>
-    <Pierce>20</Pierce>
-    <Crush>1</Crush>
-    <Foundation>
-      <Hack>1</Hack>
-      <Pierce>10</Pierce>
-      <Crush>1</Crush>
-    </Foundation>
-  </Armour>
-  <BuildRestrictions>
-    <Category>Resource</Category>
-  </BuildRestrictions>
   <Identity>
     <GenericName>Resource Structure</GenericName>
-    <Classes datatype="tokens">-ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">Resource</VisibleClasses>
   </Identity>
-  <Vision>
-    <Range>4</Range>
-  </Vision>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>1</Hack>
+        <Pierce>20</Pierce>
+        <Crush>1</Crush>
+      </Damage>
+    </Entity>
+    <Foundation>
+      <Damage>
+        <Hack>1</Hack>
+        <Pierce>10</Pierce>
+        <Crush>1</Crush>
+      </Damage>
+    </Foundation>
+  </Resistance>
 </Entity>
