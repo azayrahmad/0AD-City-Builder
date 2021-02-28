@@ -1,89 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_civic">
+<Entity parent="template_structure_civic_house">
   <Auras datatype="tokens">
     structures/pop_bonus_house_big
     structures/train_bonus_house
     structures/work_bonus_house
   </Auras>
-  <BuildRestrictions>
-    <Category>House</Category>
-  </BuildRestrictions>
-  <Capturable>
-    <CapturePoints>300</CapturePoints>
-    <GarrisonRegenRate>4.0</GarrisonRegenRate>
-  </Capturable>
   <Cost>
-    <Population>0</Population>
-    <PopulationBonus>5</PopulationBonus>
-    <BuildTime>30</BuildTime>
+    <BuildTime>50</BuildTime>
     <Resources>
-      <wood>150</wood>
+      <wood>120</wood>
     </Resources>
   </Cost>
   <Footprint>
     <Square width="16.0" depth="16.0"/>
-    <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
     <Max>6</Max>
-    <BuffHeal>0</BuffHeal>
-    <EjectHealth>0.1</EjectHealth>
-    <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support+!Elephant</List>
-    <LoadingRange>1</LoadingRange>
   </GarrisonHolder>
   <Health>
     <Max>1200</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
   </Health>
-  <Identity>
-    <GenericName>House</GenericName>
-    <Tooltip>Increase the population limit.</Tooltip>
-    <VisibleClasses datatype="tokens">Village House</VisibleClasses>
-    <Icon>structures/house.png</Icon>
-  </Identity>
   <Loot>
-    <wood>20</wood>
+    <wood>30</wood>
   </Loot>
   <Obstruction>
     <Static width="14.0" depth="14.0"/>
   </Obstruction>
-  <ProductionQueue>
-    <BatchTimeModifier>1.0</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}_support_female_citizen_house
-    </Entities>
-    <Technologies datatype="tokens">
-      health_females_01
-      pop_house_01
-      pop_house_02
-      unlock_females_house
-    </Technologies>
-  </ProductionQueue>
-  <Sound>
-    <SoundGroups>
-      <select>interface/select/building/sel_house.xml</select>
-      <constructed>interface/complete/building/complete_house.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
-    </SoundGroups>
-  </Sound>
-  <StatusBars>
-    <BarWidth>6.0</BarWidth>
-    <BarHeight>0.6</BarHeight>
-    <HeightOffset>8.0</HeightOffset>
-  </StatusBars>
-  <TerritoryDecay>
-    <DecayRate>10</DecayRate>
-  </TerritoryDecay>
+  <Population>
+    <Bonus>4</Bonus>
+  </Population>
   <TerritoryInfluence>
-    <Root>false</Root>
     <Radius>20</Radius>
     <Weight>40000</Weight>
   </TerritoryInfluence>
-  <Vision>
-    <Range>20</Range>
-  </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_3x3.xml</FoundationActor>
+    <FoundationActor>structures/fndn_4x4.xml</FoundationActor>
   </VisualActor>
 </Entity>

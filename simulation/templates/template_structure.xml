@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_entity_full">
-  <Armour>
-    <Hack>1</Hack>
-    <Pierce>1</Pierce>
-    <Crush>1</Crush>
-    <Foundation>
-      <Hack>1</Hack>
-      <Pierce>1</Pierce>
-      <Crush>1</Crush>
-    </Foundation>
-  </Armour>
-  <BuildingAI>
-    <DefaultArrowCount>0</DefaultArrowCount>
-    <GarrisonArrowMultiplier>0</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Infantry Cavalry</GarrisonArrowClasses>
-  </BuildingAI>
+<Entity>
+  <AIProxy/>
   <BuildRestrictions>
     <PlacementType>land</PlacementType>
     <Territory>own</Territory>
+    <Category>Structure</Category>
   </BuildRestrictions>
   <Capturable>
     <CapturePoints>500</CapturePoints>
@@ -26,7 +13,6 @@
   </Capturable>
   <Cost>
     <Population>1</Population>
-    <PopulationBonus>0</PopulationBonus>
     <BuildTime>10</BuildTime>
     <Resources>
       <food>0</food>
@@ -56,17 +42,19 @@
     <Unhealable>true</Unhealable>
   </Health>
   <Identity>
+    <Civ>gaia</Civ>
     <GenericName>Structure</GenericName>
-    <Classes datatype="tokens">Structure ConquestCritical</Classes>
+    <Classes datatype="tokens">Structure</Classes>
     <Undeletable>false</Undeletable>
   </Identity>
   <Loot>
-    <xp>0</xp>
     <food>0</food>
-    <wood>10</wood>
+    <wood>0</wood>
     <stone>0</stone>
     <metal>0</metal>
+    <xp>0</xp>
   </Loot>
+  <Looter/>
   <Minimap>
     <Type>structure</Type>
   </Minimap>
@@ -81,7 +69,16 @@
     <DeleteUponConstruction>false</DeleteUponConstruction>
   </Obstruction>
   <OverlayRenderer/>
+  <Ownership/>
+  <Position>
+    <Altitude>0</Altitude>
+    <Anchor>upright</Anchor>
+    <Floating>false</Floating>
+    <FloatDepth>0</FloatDepth>
+    <TurnRate>6</TurnRate>
+  </Position>
   <ProductionQueue>
+    <BatchTimeModifier>1.0</BatchTimeModifier>
     <TechCostMultiplier>
       <food>1.0</food>
       <wood>1.0</wood>
@@ -106,6 +103,34 @@
   <Repairable>
     <RepairTimeRatio>2.0</RepairTimeRatio>
   </Repairable>
+  <Resistance>
+    <Entity>
+      <ApplyStatus>
+        <Poisoned>
+          <Duration>0.0</Duration>
+          <BlockChance>1</BlockChance>
+        </Poisoned>
+      </ApplyStatus>
+      <Damage>
+        <Hack>1</Hack>
+        <Pierce>1</Pierce>
+        <Crush>1</Crush>
+      </Damage>
+    </Entity>
+    <Foundation>
+      <ApplyStatus>
+        <Poisoned>
+          <Duration>0.0</Duration>
+          <BlockChance>1</BlockChance>
+        </Poisoned>
+      </ApplyStatus>
+      <Damage>
+        <Hack>1</Hack>
+        <Pierce>1</Pierce>
+        <Crush>1</Crush>
+      </Damage>
+    </Foundation>
+  </Resistance>
   <Selectable>
     <Overlay>
       <Outline>
@@ -121,8 +146,9 @@
       <constructed>interface/complete/building/complete_universal.xml</constructed>
       <death>attack/destruction/building_collapse_large.xml</death>
       <attacked>interface/alarm/alarm_attackplayer.xml</attacked>
-      <attack_ranged>attack/weapon/arrowfly.xml</attack_ranged>
-      <attack_impact_ranged>attack/impact/arrow_metal.xml</attack_impact_ranged>
+      <attacked_gaia>interface/alarm/alarm_attacked_gaia.xml</attacked_gaia>
+      <attacked_capture>interface/alarm/alarm_attackplayer.xml</attacked_capture>
+      <attacked_capture_gaia>interface/alarm/alarm_attacked_gaia.xml</attacked_capture_gaia>
     </SoundGroups>
   </Sound>
   <StatusBars>
@@ -130,6 +156,7 @@
     <BarHeight>0.6</BarHeight>
     <HeightOffset>12.0</HeightOffset>
   </StatusBars>
+  <StatusEffectsReceiver/>
   <TerritoryDecay>
     <DecayRate>20</DecayRate>
   </TerritoryDecay>
@@ -140,7 +167,7 @@
     <Preview>false</Preview>
   </Visibility>
   <Vision>
-    <Range>40</Range>
+    <Range>4</Range>
   </Vision>
   <VisionSharing>
     <Bribable>false</Bribable>

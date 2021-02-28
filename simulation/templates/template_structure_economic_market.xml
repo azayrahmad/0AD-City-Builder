@@ -9,11 +9,8 @@
   <Auras datatype="tokens">
     structures/pop_bonus_market
   </Auras>
-  <BuildRestrictions>
-    <Category>Market</Category>
-  </BuildRestrictions>
   <Cost>
-	<Population>4</Population>
+    <Population>4</Population>
     <BuildTime>150</BuildTime>
     <Resources>
       <wood>300</wood>
@@ -28,18 +25,16 @@
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_5x5</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <Classes datatype="tokens">BarterMarket</Classes>
     <GenericName>Market</GenericName>
+    <SelectionGroupName>template_structure_economic_market</SelectionGroupName>
+    <Tooltip>Barter resources. Establish trade routes. Train Traders and research trade and barter technologies.</Tooltip>
+    <Classes datatype="tokens">Barter</Classes>
+    <VisibleClasses datatype="tokens">Trade Town Market</VisibleClasses>
     <Icon>structures/market.png</Icon>
     <RequiredTechnology>phase_town</RequiredTechnology>
-    <Tooltip>Create trade units to trade between other markets. Barter resources. Research trading and bartering improvements.</Tooltip>
-    <VisibleClasses datatype="tokens">Town Market</VisibleClasses>
   </Identity>
   <Loot>
-    <food>25</food>
-    <wood>25</wood>
-    <stone>25</stone>
-    <metal>25</metal>
+    <wood>60</wood>
   </Loot>
   <Market>
     <TradeType>land</TradeType>
@@ -51,23 +46,19 @@
   <ProductionQueue>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Technologies datatype="tokens">
-      unlock_shared_los
-      unlock_shared_dropsites
-      trade_convoys_speed
-      trade_convoys_armor
+      trader_health
       trade_gain_01
       trade_gain_02
       trade_commercial_treaty
     </Technologies>
     <Entities datatype="tokens">
-      units/{civ}_support_trader
+      units/{civ}/support_trader
     </Entities>
   </ProductionQueue>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_market.xml</select>
       <constructed>interface/complete/building/complete_market.xml</constructed>
-      <death>attack/destruction/building_collapse_large.xml</death>
       <alert_raise>interface/alarm/alarm_alert_0.xml</alert_raise>
       <alert_end>interface/alarm/alarm_alert_1.xml</alert_end>
     </SoundGroups>
@@ -81,6 +72,6 @@
     <Range>32</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_5x5.xml</FoundationActor>
+    <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
   </VisualActor>
 </Entity>
