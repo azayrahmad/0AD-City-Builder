@@ -1,0 +1,12 @@
+{
+	"type": "range",
+	"radius": 10,
+	"affects": ["Cavalry"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.8 },
+		{ "value": "UnitMotion/Run/Speed", "multiply": 0.8 }
+	],
+	"auraName": "Groves",
+	"auraDescription": "Nearby cavalry move -20% slower",
+	"stackable": "true"
+}

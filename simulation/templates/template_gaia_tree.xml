@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_gaia">
+  <Auras datatype="tokens">
+    structures/mov_penalty_tree
+  </Auras>
   <Footprint>
     <Circle radius="2.5"/>
     <Height>15.0</Height>

@@ -3,7 +3,7 @@
 	"radius": 30,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": -2 }
+		{ "value": "Population/Bonus", "add": -2 }
 	],
 	"auraName": "Military",
 	"auraDescription": "Nearby houses support -2 less population.",

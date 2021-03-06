@@ -2,8 +2,9 @@
 	"type": "range",
 	"radius": 50,
 	"affects": ["House"],
+	"affectedPlayers": ["Player"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "multiply": 1.5 }
+		{ "value": "Population/Bonus", "multiply": 1.5 }
 	],
 	"auraName": "Civic Center",
 	"auraDescription": "Nearby houses support +50% more population.",

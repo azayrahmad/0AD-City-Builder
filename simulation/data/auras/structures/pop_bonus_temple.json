@@ -3,7 +3,7 @@
 	"radius": 40,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 2 }
+		{ "value": "Population/Bonus", "add": 2 }
 	],
 	"auraName": "Blessings",
 	"auraDescription": "Nearby houses support +2 more population.",

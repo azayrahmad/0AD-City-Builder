@@ -3,7 +3,7 @@
 	"radius": 20,
 	"affects": ["House"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": 1 }
+		{ "value": "Population/Bonus", "add": 1 }
 	],
 	"auraName": "Monument",
 	"auraDescription": "Nearby houses support +1 more population.",
