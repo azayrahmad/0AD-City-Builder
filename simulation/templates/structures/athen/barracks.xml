@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_special">
-  <Auras datatype="tokens">
-    structures/pop_bonus_civic
-  </Auras>
-  <Cost>
-    <BuildTime>200</BuildTime>
-    <Population>3</Population>
-    <Resources>
-      <stone>200</stone>
-      <metal>200</metal>
-    </Resources>
-  </Cost>
+<Entity parent="template_structure_military_barracks">
   <Footprint>
     <Square width="30.0" depth="30.0"/>
     <Height>8.0</Height>
   </Footprint>
-  <GarrisonHolder>
-    <Max>10</Max>
-  </GarrisonHolder>
   <Health>
-    <Max>2000</Max>
+    <SpawnEntityOnDeath>decay|rubble/rubble_stone_5x5</SpawnEntityOnDeath>
   </Health>
   <Identity>
     <Civ>athen</Civ>
     <GenericName>Gymnasium</GenericName>
     <SpecificName>Gymnasion</SpecificName>
     <Tooltip>Train Champions.</Tooltip>
-    <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Gymnasium</VisibleClasses>
     <Icon>structures/gymnasium.png</Icon>
-    <VisibleClasses datatype="tokens">Town</VisibleClasses>
-    <RequiredTechnology>phase_town</RequiredTechnology>
   </Identity>
-  <Loot>
-    <stone>40</stone>
-    <metal>40</metal>
-  </Loot>
   <Obstruction>
     <Static width="28.0" depth="28.0"/>
-  </Obstruction>
+  </Obstruction> 
   <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry
-      units/{civ}/champion_ranged
+      -units/{civ}/infantry_spearman_b
+      -units/{civ}/infantry_pikeman_b
+      -units/{civ}/infantry_maceman_b
+      -units/{civ}/infantry_axeman_b
+      -units/{civ}/infantry_swordsman_b
+      -units/{civ}/infantry_javelineer_b
+      -units/{civ}/infantry_slinger_b
+      -units/{civ}/infantry_archer_b
+      -units/{civ}/champion_infantry_spearman
+      -units/{civ}/champion_infantry_pikeman
+      -units/{civ}/champion_infantry_maceman
+      -units/{civ}/champion_infantry_axeman
+      -units/{civ}/champion_infantry_swordsman
+      -units/{civ}/champion_infantry_javelineer
+      -units/{civ}/champion_infantry_slinger
+      -units/{civ}/champion_infantry_archer
     </Entities>
   </ProductionQueue>
   <Sound>
@@ -52,9 +44,6 @@
       <constructed>interface/complete/building/complete_gymnasium.xml</constructed>
     </SoundGroups>
   </Sound>
-  <Vision>
-    <Range>40</Range>
-  </Vision>
   <VisualActor>
     <Actor>structures/athenians/gymnasium.xml</Actor>
     <FoundationActor>structures/fndn_8x9.xml</FoundationActor>

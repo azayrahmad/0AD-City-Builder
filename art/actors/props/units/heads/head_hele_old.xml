@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor version="1">
+  <castshadow/>
+  <group>
+    <variant frequency="1" name="beard">
+      <mesh>props/head_beard.dae</mesh>
+    </variant>
+	<variant frequency="1" name="beard-small">
+      <mesh>props/head_beard_small.dae</mesh>
+    </variant>
+    <variant frequency="1" name="beard-wide">
+      <mesh>props/head_beard_wide.dae</mesh>
+    </variant>
+    <variant frequency="1" name="beard-long">
+      <mesh>props/head_beard_large.dae</mesh>
+    </variant>
+  </group>
+  <group>
+    <variant frequency="1" name="head-bare">
+      <textures><texture file="props/head/hele_healer_a.dds" name="baseTex"/></textures>
+    </variant>
+	<variant frequency="1" name="head-c">
+      <textures><texture file="props/head/hele_c.dds" name="baseTex"/></textures>
+    </variant>
+    <variant frequency="1" name="head-d">
+      <textures><texture file="props/head/hele_d.dds" name="baseTex"/></textures>
+    </variant>
+    <variant frequency="1" name="face-e">
+      <textures><texture file="props/head/hele_e.dds" name="baseTex"/></textures>
+    </variant>
+    <variant frequency="1" name="face-f">
+      <textures><texture file="props/head/hele_f.dds" name="baseTex"/></textures>
+    </variant>
+    <variant frequency="1" name="face-g">
+      <textures><texture file="props/head/hele_g.dds" name="baseTex"/></textures>
+    </variant>
+  </group>
+  <group>
+    <variant frequency="1" name="dark brown">
+      <color>184 151 98</color>
+    </variant>
+    <variant frequency="1" name="brown">
+      <color>255 205 125</color>
+    </variant>
+    <variant frequency="1" name="brown black">
+      <color>153 145 129</color>
+    </variant>
+    <variant frequency="1" name="blue black">
+      <color>129 152 153</color>
+    </variant>
+    <variant frequency="2" name="medium gray">
+      <color>183 166 158</color>
+    </variant>
+    <variant frequency="3" name="light gray">
+      <color>214 196 194</color>
+    </variant>
+    <variant frequency="1" name="dark gray">
+      <color>113 99 90</color>
+    </variant>
+  </group>
+  <material>objectcolor.xml</material>
+</actor>
