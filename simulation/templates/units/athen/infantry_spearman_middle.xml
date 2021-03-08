@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee_spearman_hoplite">
+  <Builder>
+    <Entities datatype="tokens">      
+	  -structures/{civ}/civil_centre
+      -structures/{civ}/barracks
+      -structures/{civ}/stable
+      -structures/{civ}/arsenal
+      -structures/{civ}/temple
+      -structures/{civ}/fortress
+      -structures/{civ}/theater
+      -structures/{civ}/wonder
+      structures/athen/gymnasium
+    </Entities>
+  </Builder>
+  <Identity>
+    <Civ>athen</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/athen/infantry_spearman_b</SelectionGroupName>
+    <GenericName>Levy Hoplite</GenericName>
+    <SpecificName>Hoplítēs Haplos</SpecificName>
+    <History>Zeugitai were those who could produce 200 medimnoi of goods yearly, therefore able to afford their own hoplite armor. The term appears to mean men who could afford a yoke of oxen. </History>
+	<Tooltip>Can possess up to two slaves.
+Can gather food and lumber but cannot mine.
+Can build economic and defense buildings.
+Faster moving but no armor.</Tooltip>
+    <Icon>units/athen_militia_spearman.png</Icon>
+    <VisibleClasses datatype="tokens">Middle-Class</VisibleClasses>
+  </Identity>
+  <Loot>
+    <metal>5</metal>
+  </Loot>
+  <Promotion>
+    <Entity>units/athen/champion_infantry</Entity>
+	<RequiredXp>600</RequiredXp>
+  </Promotion>
+  <ResourceGatherer>
+    <Rates>
+      <stone.rock disable=""/>
+      <stone.ruins disable=""/>
+      <metal.ore disable=""/>
+    </Rates>
+  </ResourceGatherer>
+  <VisualActor>
+    <Actor>units/athenians/infantry_spearman_b.xml</Actor>
+  </VisualActor>
+</Entity>

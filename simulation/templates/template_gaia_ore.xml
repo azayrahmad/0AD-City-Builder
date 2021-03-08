@@ -2,6 +2,7 @@
 <Entity parent="template_gaia">
   <Auras datatype="tokens">
     structures/pop_penalty_economy
+	structures/health_decay_mine
   </Auras>
   <Footprint>
     <Circle radius="5.0"/>

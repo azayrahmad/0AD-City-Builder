@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_support_male_citizen">
+  <Capturable>
+    <CapturePoints>60</CapturePoints>
+    <RegenRate>1</RegenRate>
+    <GarrisonRegenRate>20</GarrisonRegenRate>
+  </Capturable>
+  <Cost>
+    <Resources>
+      <food>50</food>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Upper-Class</VisibleClasses>
+  </Identity>  
+  <Loot>
+    <xp>10</xp>
+    <food>2</food>
+    <wood>2</wood>
+    <stone>2</stone>
+    <metal>2</metal>
+  </Loot>
+</Entity>

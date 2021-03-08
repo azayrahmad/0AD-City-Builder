@@ -4,7 +4,7 @@
 	"affects": ["House"],
 	"affectedPlayers": ["Enemy", "Player"],
 	"modifications": [
-		{ "value": "Cost/PopulationBonus", "add": -1 }
+		{ "value": "Population/Bonus", "add": -1 }
 	],
 	"auraName": "Pollution",
 	"auraDescription": "Nearby houses support -1 less population.",

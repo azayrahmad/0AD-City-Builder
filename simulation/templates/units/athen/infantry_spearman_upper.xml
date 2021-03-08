@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee_spearman_hoplite">
+  <Builder>
+    <Rate>0.5</Rate>
+    <Entities datatype="tokens">
+      -structures/{civ}/storehouse
+      -structures/{civ}/farmstead
+      -structures/{civ}/field
+      -structures/{civ}/corral
+      -structures/{civ}/dock
+      -structures/{civ}/forge
+      -structures/{civ}/market
+      -structures/{civ}/outpost
+      structures/athen/strategeion
+      structures/athen/theatron
+      structures/athen/prytaneion
+    </Entities>
+  </Builder>
+  <Cost>
+    <Resources>
+      <food>60</food>
+      <wood>0</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Civ>athen</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/athen_infantry_spearman_armoured</SelectionGroupName>
+    <GenericName>Classical Hoplite</GenericName>
+    <SpecificName>Hoplítēs</SpecificName>
+    <History>Upper-class citizens are wealthy enough to afford bronze armor as hoplites.</History>	
+	<Tooltip>Can possess up to five slaves.
+Cannot gather.
+Builds civic and military buildings.
+Slower moving but stronger armor and attack.</Tooltip>
+    <Icon>units/athen_armored_spearman.png</Icon>
+    <VisibleClasses datatype="tokens">Upper-Class -Worker</VisibleClasses>
+    <Rank>Advanced</Rank>
+    <RequiredTechnology>phase_town</RequiredTechnology>
+  </Identity>
+  <Loot>
+    <metal>10</metal>
+  </Loot>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.7</WalkSpeed>
+    <RunMultiplier>1.1</RunMultiplier>
+  </UnitMotion>
+  <Promotion>
+    <Entity>units/athen/champion_infantry</Entity>
+	<RequiredXp>300</RequiredXp>
+  </Promotion>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="mul">2</Hack>
+        <Pierce op="mul">2</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <ResourceGatherer disable=""/>
+  <VisualActor>
+    <Actor>units/athenians/infantry_spearman_e_bronze.xml</Actor>
+  </VisualActor>
+</Entity>

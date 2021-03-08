@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_support_slave">
+  <Capturable>
+    <CapturePoints>50</CapturePoints>
+    <RegenRate>0.5</RegenRate>
+    <GarrisonRegenRate>5.0</GarrisonRegenRate>
+  </Capturable>
+  <Cost>
+    <Resources>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
+  <Health>
+    <RegenRate>0</RegenRate>
+    <Unhealable>false</Unhealable>
+  </Health>
+  <Identity>
+    <Civ>athen</Civ>
+    <SpecificName>Doûlos</SpecificName>
+    <History>Athenians prided themselves for treating their slaves humanely.</History>
+    <Tooltip>Non-citizen working class.
+Can gather all resources but slower.
+Can build but cannot initiate building.
+</Tooltip>
+    <Icon>units/global_slave.png</Icon>
+	<Phenotype>female male</Phenotype>
+  </Identity>
+  <Loot>
+    <xp>10</xp>
+    <metal>0</metal>
+  </Loot>
+  <ResourceGatherer>
+    <BaseSpeed>1.0</BaseSpeed>
+    <Rates>
+      <food.fish>0.3</food.fish>
+      <food.fruit>0.3</food.fruit>
+      <food.grain>0.3</food.grain>
+      <food.meat>0.3</food.meat>
+      <wood.tree>0.3</wood.tree>
+      <wood.ruins>0.3</wood.ruins>
+      <stone.rock>0.3</stone.rock>
+      <stone.ruins>0.3</stone.ruins>
+      <metal.ore>0.3</metal.ore>
+      <treasure disable=""/>
+    </Rates>
+  </ResourceGatherer>
+  <TrainingRestrictions>
+    <Category>Slave</Category>
+  </TrainingRestrictions>
+  <VisualActor>
+    <Actor>units/hellenes/slave_{phenotype}.xml</Actor>
+  </VisualActor>
+</Entity>
