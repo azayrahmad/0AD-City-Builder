@@ -2,6 +2,7 @@
 <Entity parent="template_structure_resource">
   <Auras datatype="tokens">
     structures/train_bonus_corral
+    structures/tech_bonus_corral
   </Auras>
   <Cost>
     <BuildTime>50</BuildTime>

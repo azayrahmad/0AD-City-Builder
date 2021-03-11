@@ -10,7 +10,6 @@
       -structures/{civ}/fortress
       -structures/{civ}/theater
       -structures/{civ}/wonder
-      -structures/athen/gymnasium
       structures/{civ}/barracks_gymnasium
     </Entities>
   </Builder>

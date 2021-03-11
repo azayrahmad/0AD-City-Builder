@@ -1,12 +1,12 @@
 {
 	"type": "range",
 	"radius": 30,
-	"affects": ["Forge", "Arsenal"],
+	"affects": ["Temple"],
 	"modifications": [
 		{ "value": "ProductionQueue/TechCostMultiplier/time", "add": -0.1 }
 	],
-	"auraName": "Resources Supply",
-	"auraDescription": "Nearby forges and arsenals research +10% faster",
+	"auraName": "Sacrifice Supply",
+	"auraDescription": "Nearby temples research +10% faster",
 	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/dash.png",
