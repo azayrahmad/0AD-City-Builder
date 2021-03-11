@@ -29,8 +29,6 @@
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Gymnasium</VisibleClasses>
     <Icon>structures/gymnasium.png</Icon>
-    <VisibleClasses datatype="tokens">Town</VisibleClasses>
-    <RequiredTechnology>phase_town</RequiredTechnology>
   </Identity>
   <Loot>
     <stone>40</stone>
