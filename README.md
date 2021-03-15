@@ -9,6 +9,6 @@ This mod aims to realistically replicate civilian aspects of ancient times depic
 ## Current State
 Currently feature #1 and #2 is available for 0AD Alpha 23, but only feature #1 is available for Alpha 24.
 ## Links
-[0 AD Official Website](https://play0ad.com/)
-[0 AD City Builder mod on mod.io](https://0ad.mod.io/city-building-mod)
-[0 AD City Builder Wildfire Games Forum](https://wildfiregames.com/forum/topic/26701-city-building-mod-a23-a24/)
+* [0 AD Official Website](https://play0ad.com/)
+* [0 AD City Builder mod on mod.io](https://0ad.mod.io/city-building-mod)
+* [0 AD City Builder Wildfire Games Forum](https://wildfiregames.com/forum/topic/26701-city-building-mod-a23-a24/)
