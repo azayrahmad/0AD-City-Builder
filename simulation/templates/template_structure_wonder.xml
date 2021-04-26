@@ -49,6 +49,9 @@
     <stone>300</stone>
     <metal>200</metal>
   </Loot>
+  <MoraleInfluence>
+    <Significance>150</Significance>
+  </MoraleInfluence>
   <Obstruction>
     <Static width="30.0" depth="30.0"/>
   </Obstruction>
