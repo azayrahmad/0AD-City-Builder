@@ -417,7 +417,10 @@ function GetTemplateDataHelper(template, player, auraTemplates, modifiers = {})
 		ret.health = Math.round(getEntityValue("Health/Max"));
 
     if (template.Morale)
-		ret.health = Math.round(getEntityValue("Morale/Max"));
+		ret.morale = Math.round(getEntityValue("Morale/Max"));
+
+    if (template.MoraleInfluence)
+        ret.moraleInfluence = Math.round(getEntityValue("MoraleInfluence/Significance"));
 
 	if (template.Identity)
 	{
