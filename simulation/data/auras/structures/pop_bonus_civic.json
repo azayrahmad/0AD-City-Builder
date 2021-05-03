@@ -5,7 +5,7 @@
 	"modifications": [
 		{ "value": "Population/Bonus", "add": 2 }
 	],
-	"auraName": "Civic Facilities",
+	"auraName": "Civic",
 	"auraDescription": "Nearby houses support +2 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {

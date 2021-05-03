@@ -229,6 +229,8 @@ PETRA.ConstructionPlan.prototype.findGoodPosition = function(gameState)
 						//placement.addInfluence(x, z, 60 / cellSize, 20);    // cbm - houses are close to civilian buildings
 						alreadyHasHouses = true;
 					}
+					else if (ent.hasClass("Forge") || ent.hasClass("CivCentre"))
+						placement.addInfluence(x, z, 60 / cellSize, 30);
 					else if (ent.hasClass("Civic") || ent.hasClass("Market") || ent.hasClass("Wonder"))
 						placement.addInfluence(x, z, 60 / cellSize, 20);
 					else if (!ent.hasClass("Wall") || ent.hasClass("Gate"))

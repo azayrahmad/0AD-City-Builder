@@ -10,7 +10,7 @@
       -structures/{civ}/fortress
       -structures/{civ}/theater
       -structures/{civ}/wonder
-      structures/athen/gymnasium
+      structures/{civ}/barracks_gymnasium
     </Entities>
   </Builder>
   <Identity>
@@ -19,7 +19,7 @@
     <SelectionGroupName>units/athen/infantry_spearman_b</SelectionGroupName>
     <GenericName>Levy Hoplite</GenericName>
     <SpecificName>Hoplítēs Haplos</SpecificName>
-    <History>Zeugitai were those who could produce 200 medimnoi of goods yearly, therefore able to afford their own hoplite armor. The term appears to mean men who could afford a yoke of oxen. </History>
+    <History></History>
 	<Tooltip>Can possess up to two slaves.
 Can gather food and lumber but cannot mine.
 Can build economic and defense buildings.

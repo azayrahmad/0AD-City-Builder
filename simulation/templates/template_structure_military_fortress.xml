@@ -78,6 +78,9 @@
     <wood>60</wood>
     <stone>120</stone>
   </Loot>
+  <MoraleInfluence>
+    <Significance>70</Significance>
+  </MoraleInfluence>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
   </Obstruction>

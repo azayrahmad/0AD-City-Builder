@@ -5,7 +5,7 @@
 	"modifications": [
 		{ "value": "ProductionQueue/TechCostMultiplier/time", "add": -0.1 }
 	],
-	"auraName": "Raw Resources Supply",
+	"auraName": "Resources Supply",
 	"auraDescription": "Nearby forges and arsenals research +10% faster",
 	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
     "rangeOverlay" : {

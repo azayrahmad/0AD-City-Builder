@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_gaia_ore">
+  <Auras datatype="tokens">
+	-structures/health_decay_mine
+	structures/health_decay_mine_large
+  </Auras>
+  <Footprint>
+    <Circle radius="10.0"/>
+    <Height>3.5</Height>
+  </Footprint>
+  <Obstruction>
+    <Static width="13.0" depth="13.0"/>
+  </Obstruction>
+  <ResourceSupply>
+    <Amount>5000</Amount>
+    <MaxGatherers>24</MaxGatherers>
+  </ResourceSupply>
+  <StatusBars>
+    <BarWidth>5.0</BarWidth>
+    <BarHeight>0.5</BarHeight>
+  </StatusBars>
+</Entity>
