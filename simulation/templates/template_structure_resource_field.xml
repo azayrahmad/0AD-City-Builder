@@ -19,7 +19,7 @@
     <GenericName>Field</GenericName>
     <SelectionGroupName>template_structure_resource_field</SelectionGroupName>
     <VisibleClasses datatype="tokens">Field</VisibleClasses>
-    <Tooltip>Harvest grain for food. Each subsequent gatherer works less efficiently.</Tooltip>
+    <Tooltip>Harvest grain for food, 1 Citizen per Field.</Tooltip>
     <Icon>structures/field.png</Icon>
   </Identity>
   <Loot>
@@ -38,17 +38,17 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>15</Hack>
+        <Hack>5</Hack>
         <Pierce>40</Pierce>
-        <Crush>5</Crush>
+        <Crush>10</Crush>
       </Damage>
     </Entity>
   </Resistance>
   <ResourceSupply>
     <KillBeforeGather>false</KillBeforeGather>
-    <Amount>Infinity</Amount>
+    <Amount>1000</Amount>
     <Type>food.grain</Type>
-    <MaxGatherers>5</MaxGatherers>
+    <MaxGatherers>1</MaxGatherers>
     <DiminishingReturns>0.90</DiminishingReturns>
   </ResourceSupply>
   <Sound>
