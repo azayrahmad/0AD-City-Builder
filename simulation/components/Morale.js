@@ -53,10 +53,13 @@ Morale.prototype.Init = function()
 
 	//TODO: Make these customizable in template
 	this.moraleRegenMultiplier = 0.1; 		// Morale influence regen multiplier
-	this.moraleVisionRangeMultiplier = 0.3; 	// Range of morale influence, multiplied from entity's vision range
+	this.moraleVisionRangeMultiplier = 0.3; // Range of morale influence, multiplied from entity's vision range
 	this.moraleLevelEffectThreshold = 2; 	// Morale level on which Demoralized effect is applied
 
+	this.desertTime = 1 * 1000;			// Time before unit with zero morale deserts
+
 	this.CheckMoraleRegenTimer();
+	this.CheckMoraleDesertTimer();
 	this.CleanMoraleInfluence();
 };
 
@@ -98,7 +101,7 @@ Morale.prototype.GetMaxMorale = function()
  */
 Morale.prototype.GetMoraleLevel = function()
 {
-	return this.Morale === 0 ? 1 : Math.ceil(5 * this.Morale / this.maxMorale);
+	return Math.ceil(5 * this.Morale / this.maxMorale);
 };
 
 /**
@@ -387,6 +390,63 @@ Morale.prototype.CheckMoraleRegenTimer = function()
 	let cmpTimer = Engine.QueryInterface(SYSTEM_ENTITY, IID_Timer);
 	this.regenTimer = cmpTimer.SetInterval(this.entity, IID_Morale, "ExecuteRegeneration", this.moraleRegenTime, this.moraleRegenTime, null);
 };
+
+/*
+ * Set timer before unit deserts
+ */
+Morale.prototype.CheckMoraleDesertTimer = function()
+{
+	// check if we need a timer
+	if (this.Morale !== 0)
+	{
+		// Unit has morale, disable desert timer
+		if (this.desertTimer)
+		{
+			let cmpTimer = Engine.QueryInterface(SYSTEM_ENTITY, IID_Timer);
+			cmpTimer.CancelTimer(this.desertTimer);
+			this.desertTimer = undefined;
+		}
+		return;
+	}
+
+	// Unit has zero morale for too long, start timer to deserting
+	if (this.desertTimer)
+		return;
+	let cmpTimer = Engine.QueryInterface(SYSTEM_ENTITY, IID_Timer);
+	this.desertTimer = cmpTimer.SetTimeout(this.entity, IID_Morale, "Desert", this.desertTime, null);
+};
+
+/*
+ * Handle effect when unit deserts i.e make it Gaia slave
+ */
+Morale.prototype.Desert = function()
+{
+	// Dead unit do not desert
+	let cmpHealth = Engine.QueryInterface(this.entity, IID_Health);
+	if (cmpHealth && cmpHealth.GetHitpoints() == 0)
+		return;
+
+	// Get slave template for civ
+	let slaveTemplate = "units/{civ}/support_slave"
+	let cmpIdentity = Engine.QueryInterface(this.entity, IID_Identity);
+	if (!cmpIdentity)
+		return;
+	slaveTemplate = slaveTemplate.replace(/\{civ\}/g, cmpIdentity.GetCiv());
+
+	// Slave do not desert
+	let cmpTemplateManager = Engine.QueryInterface(SYSTEM_ENTITY, IID_TemplateManager);
+	if (cmpTemplateManager.GetCurrentTemplateName(this.entity) == slaveTemplate)
+		return;
+
+	// Set unit to Gaia
+	let cmpOwnership = Engine.QueryInterface(this.entity, IID_Ownership);
+	if (!cmpOwnership)
+		return;
+	cmpOwnership.SetOwner(0);
+
+	// Convert unit to slave
+	ChangeEntityTemplate(this.entity, slaveTemplate);
+}
 
 /**
  * @param {number} amount - The amount of Morale to substract. Stop reduction once reached 0.
@@ -682,6 +742,7 @@ Morale.prototype.OnGlobalPlayerDefeated = function(msg)
 Morale.prototype.RegisterMoraleChanged = function(from)
 {
 	this.CheckMoraleRegenTimer();
+	this.CheckMoraleDesertTimer();
 	Engine.PostMessage(this.entity, MT_MoraleChanged, { "from": from, "to": this.Morale });
 };
 
