@@ -1223,8 +1223,6 @@ PETRA.AttackPlan.prototype.StartAttack = function(gameState)
 			ent.setStance(stance);
 	}
 
-    this.unitCollection.setFormation("battle_line");
-
 	let rallyAccess = gameState.ai.accessibility.getAccessValue(this.rallyPoint);
 	let targetAccess = PETRA.getLandAccess(gameState, this.target);
 	if (rallyAccess == targetAccess)
@@ -1236,6 +1234,7 @@ PETRA.AttackPlan.prototype.StartAttack = function(gameState)
 		this.overseas = 0;
 		this.state = "walking";
 		this.unitCollection.moveToRange(this.path[0][0], this.path[0][1], 0, 15);
+        this.unitCollection.setFormation("special/formations/battle_line");
 	}
 	else
 	{
@@ -1278,7 +1277,7 @@ PETRA.AttackPlan.prototype.update = function(gameState, events)
 		this.state = "";
 		this.startingAttack = true;
 
-        this.unitCollection.setFormation("battle_line");
+        this.unitCollection.setFormation("special/formations/battle_line");
 
 		this.unitCollection.forEach(ent => {
 			ent.stopMoving();
