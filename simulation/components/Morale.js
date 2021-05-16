@@ -56,7 +56,7 @@ Morale.prototype.Init = function()
 	this.moraleVisionRangeMultiplier = 0.3; // Range of morale influence, multiplied from entity's vision range
 	this.moraleLevelEffectThreshold = 2; 	// Morale level on which Demoralized effect is applied
 
-	this.desertTime = 1 * 1000;			// Time before unit with zero morale deserts
+	this.desertTime = 30 * 1000;			// Time before unit with zero morale deserts
 
 	this.CheckMoraleRegenTimer();
 	this.CheckMoraleDesertTimer();
