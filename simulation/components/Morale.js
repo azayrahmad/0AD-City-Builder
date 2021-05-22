@@ -442,11 +442,13 @@ Morale.prototype.Desert = function()
 	if (cmpHealth && cmpHealth.GetHitpoints() == 0)
 		return;
 
-	// Get slave template for phenotype
-	let slaveTemplate = "units/support_slave_{phenotype}"
+	// Retrieve identity of deserter
 	let cmpIdentity = Engine.QueryInterface(this.entity, IID_Identity);
 	if (!cmpIdentity)
 		return;
+
+	// Get slave template for phenotype
+	let slaveTemplate = "units/support_slave_{phenotype}"
 	slaveTemplate = slaveTemplate.replace(/\{phenotype\}/g, cmpIdentity.phenotype);
 
 	// Slave do not desert
@@ -459,6 +461,42 @@ Morale.prototype.Desert = function()
 	if (!cmpOwnership)
 		return;
 	cmpOwnership.SetOwner(0);
+
+	// Spawn ride animal if any
+	if (cmpIdentity.HasClass("Elephant") || cmpIdentity.HasClass("Cavalry"))
+	{
+		let rideAnimalTemplate = ""
+		if (cmpIdentity.HasClass("Elephant"))
+		{
+		 	rideAnimalTemplate = "gaia/fauna_elephant_african_bush";
+		}
+		else if (cmpIdentity.HasClass("Cavalry"))
+		{
+			rideAnimalTemplate = "gaia/fauna_horse_breed";
+		}
+		let spawnedEntity = Engine.AddLocalEntity(rideAnimalTemplate);
+
+		let cmpPosition = Engine.QueryInterface(this.entity, IID_Position);
+		if (!cmpPosition.IsInWorld())
+			return INVALID_ENTITY;
+		let cmpSpawnedPosition = Engine.QueryInterface(spawnedEntity, IID_Position);
+		let pos = cmpPosition.GetPosition();
+		let rideAnimalOffsidePos = 5
+		cmpSpawnedPosition.JumpTo(pos.x + rideAnimalOffsidePos, pos.z + rideAnimalOffsidePos);
+		let rot = cmpPosition.GetRotation();
+		cmpSpawnedPosition.SetYRotation(rot.y);
+		cmpSpawnedPosition.SetXZRotation(rot.x, rot.z);
+
+		var cmpSpawnedUnitAI = Engine.QueryInterface(spawnedEntity, IID_UnitAI);
+		if (cmpSpawnedUnitAI)
+		{
+			cmpSpawnedUnitAI.SetStance("violent")
+		}
+
+		let cmpSpawnedOwnership = Engine.QueryInterface(spawnedEntity, IID_Ownership);
+		if (cmpSpawnedOwnership)
+			cmpSpawnedOwnership.SetOwner(0);
+	}
 
 	// Convert unit to slave
 	ChangeEntityTemplate(this.entity, slaveTemplate);
@@ -605,7 +643,7 @@ Morale.prototype.ChangeStance = function(entity, moraleLevel)
 		else if (moraleLevel === 5)
 		{
 			//cmpUnitAI.SetStance("violent");
-			cmpUnitAI.Cheer();
+			//cmpUnitAI.Cheer();
 		}
 		else
 		{
