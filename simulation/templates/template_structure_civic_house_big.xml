@@ -29,7 +29,7 @@
     <Static width="14.0" depth="14.0"/>
   </Obstruction>
   <Population>
-    <Bonus>4</Bonus>
+    <Bonus>2</Bonus>
   </Population>
   <TerritoryInfluence>
     <Radius>20</Radius>

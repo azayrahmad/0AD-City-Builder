@@ -2,6 +2,7 @@
 	"type": "range",
 	"radius": 30,
 	"affects": ["House"],
+	"affectedPlayers": ["Player"],
 	"modifications": [
 		{ "value": "Population/Bonus", "add": 2 }
 	],

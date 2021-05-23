@@ -57,18 +57,6 @@
       <food>50</food>
     </Resources>
   </Cost>
-  <Heal>
-    <Range>5</Range>
-    <RangeOverlay>
-      <LineTexture>heal_overlay_range.png</LineTexture>
-      <LineTextureMask>heal_overlay_range_mask.png</LineTextureMask>
-      <LineThickness>0.35</LineThickness>
-    </RangeOverlay>
-    <Health>2</Health>
-    <Interval>2000</Interval>
-    <UnhealableClasses datatype="tokens"/>
-    <HealableClasses datatype="tokens">Human</HealableClasses>
-  </Heal>
   <Health>
     <Max>25</Max>
   </Health>

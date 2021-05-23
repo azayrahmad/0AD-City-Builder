@@ -4,10 +4,10 @@
 	"affects": ["House"],
 	"affectedPlayers": ["Player"],
 	"modifications": [
-		{ "value": "Population/Bonus", "multiply": 1.5 }
+		{ "value": "Population/Bonus", "add": 1 }
 	],
 	"auraName": "Civic Center",
-	"auraDescription": "Nearby houses support +50% more population.",
+	"auraDescription": "Nearby houses support +1 more population.",
 	"overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
     "rangeOverlay" : {
         "lineTexture": "overlay/meander.png",

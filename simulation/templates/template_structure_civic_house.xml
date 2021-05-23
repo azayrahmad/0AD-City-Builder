@@ -46,7 +46,7 @@
     <Static width="11.0" depth="11.0"/>
   </Obstruction>
   <Population>
-    <Bonus>2</Bonus>
+    <Bonus>1</Bonus>
   </Population>
   <ProductionQueue>
     <Entities datatype="tokens">

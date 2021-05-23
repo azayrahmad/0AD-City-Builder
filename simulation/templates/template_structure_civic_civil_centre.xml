@@ -100,7 +100,7 @@
     <Static width="30.0" depth="30.0"/>
   </Obstruction>
   <Population>
-    <Bonus>20</Bonus>
+    <Bonus>5</Bonus>
   </Population>
   <ProductionQueue>
     <BatchTimeModifier>0.8</BatchTimeModifier>

@@ -5,10 +5,17 @@
     <RaiseAlertRange>50</RaiseAlertRange>
     <EndOfAlertRange>100</EndOfAlertRange>
     <SearchRange>100</SearchRange>
-  </AlertRaiser>  
+  </AlertRaiser>
   <Auras datatype="tokens">
     structures/work_bonus_farmstead
   </Auras>
+      <BuildRestrictions>
+        <Category>Farmstead</Category>
+        <Distance>
+          <FromClass>Farmstead</FromClass>
+          <MinDistance>100</MinDistance>
+        </Distance>
+      </BuildRestrictions>
   <Capturable>
     <CapturePoints>300</CapturePoints>
   </Capturable>
