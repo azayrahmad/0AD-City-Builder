@@ -1,19 +1,30 @@
 {
-	"type": "range",
-	"radius": 20,
-	"affects": ["Worker"],
-	"modifications": [
-		{ "value": "ResourceGatherer/Capacities/wood", "add": 1 },
-		{ "value": "ResourceGatherer/Capacities/stone", "add": 1 },
-		{ "value": "ResourceGatherer/Capacities/metal", "add": 1 }
-	],
-	"auraName": "Quick Shuttle",
-	"auraDescription": "Nearby workers can carry one more resources",
-	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
-    "rangeOverlay" : {
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "Worker"
+    ],
+    "modifications": [
+        {
+            "value": "ResourceGatherer/Capacities/wood",
+            "add": 1
+        },
+        {
+            "value": "ResourceGatherer/Capacities/stone",
+            "add": 1
+        },
+        {
+            "value": "ResourceGatherer/Capacities/metal",
+            "add": 1
+        }
+    ],
+    "auraName": "Quick Shuttle",
+    "auraDescription": "Storehouse proximity allows workers to carry +1 additional wood, stone, and metal.",
+    "overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

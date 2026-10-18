@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_civic">
+  <Auras datatype="tokens">
+    structures/pop_bonus_civic
+  </Auras>
   <Cost>
     <BuildTime>150</BuildTime>
     <Resources>
@@ -8,7 +11,7 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="29" depth="21.0"/>
+    <Square width="29" depth="21.0" />
     <Height>10.0</Height>
   </Footprint>
   <GarrisonHolder>
@@ -28,19 +31,18 @@
     <SelectionGroupName>template_structure_civic_stoa</SelectionGroupName>
     <Classes datatype="tokens">-ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">Town Stoa</VisibleClasses>
-    <Icon>gaia/special_stoa.png</Icon>
-    <RequiredTechnology>phase_town</RequiredTechnology>
+    <Icon>structures/stoa.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <stone>20</stone>
     <metal>30</metal>
   </Loot>
   <Obstruction>
-    <Static width="28.0" depth="20.0"/>
+    <Static width="28.0" depth="20.0" />
   </Obstruction>
-  <Population>
-    <Bonus>10</Bonus>
-  </Population>
   <TerritoryInfluence>
     <Root>false</Root>
     <Radius>40</Radius>

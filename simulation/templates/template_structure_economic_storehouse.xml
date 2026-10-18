@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_economic">
-  <AlertRaiser>
-    <List datatype="tokens">FemaleCitizen</List>
-    <RaiseAlertRange>50</RaiseAlertRange>
-    <EndOfAlertRange>100</EndOfAlertRange>
-    <SearchRange>100</SearchRange>
-  </AlertRaiser>
   <Auras datatype="tokens">
     structures/tech_bonus_storehouse
     structures/work_bonus_storehouse
   </Auras>
-  <Capturable>
-    <CapturePoints>300</CapturePoints>
-  </Capturable>
+  <AlertRaiser>
+    <List datatype="tokens">Civilian</List>
+    <RaiseAlertRange>50</RaiseAlertRange>
+    <EndOfAlertRange>100</EndOfAlertRange>
+    <SearchRange>100</SearchRange>
+  </AlertRaiser>
   <Cost>
     <BuildTime>40</BuildTime>
     <Resources>
@@ -20,7 +17,7 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="15.0" depth="15.0"/>
+    <Square width="15.0" depth="15.0" />
     <Height>8.0</Height>
   </Footprint>
   <Health>
@@ -34,15 +31,19 @@
     <Classes datatype="tokens">DropsiteWood DropsiteMetal DropsiteStone</Classes>
     <VisibleClasses datatype="tokens">Village Storehouse</VisibleClasses>
     <Icon>structures/storehouse.png</Icon>
-    <RequiredTechnology>phase_village</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>20</wood>
   </Loot>
   <Obstruction>
-    <Static width="13.0" depth="13.0"/>
+    <Static width="13.0" depth="13.0" />
   </Obstruction>
-  <ProductionQueue>
+  <ProductionQueue />
+  <RallyPoint disable="" />
+  <Researcher>
     <Technologies datatype="tokens">
       gather_lumbering_ironaxes
       gather_lumbering_strongeraxes
@@ -57,8 +58,7 @@
       gather_capacity_wheelbarrow
       gather_capacity_carts
     </Technologies>
-  </ProductionQueue>
-  <RallyPoint disable=""/>
+  </Researcher>
   <ResourceDropsite>
     <Types>wood stone metal</Types>
     <Sharable>true</Sharable>

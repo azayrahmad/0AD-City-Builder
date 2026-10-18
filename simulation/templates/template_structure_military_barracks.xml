@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_military">
   <Auras datatype="tokens">
-    structures/barracks_xp_trickle
+    structures/xp_trickle
   </Auras>
   <Cost>
     <BuildTime>150</BuildTime>
@@ -11,12 +11,12 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="19.0" depth="19.0"/>
+    <Square width="19.0" depth="19.0" />
     <Height>12.0</Height>
   </Footprint>
   <GarrisonHolder>
     <Max>10</Max>
-    <List datatype="tokens">Infantry Cavalry</List>
+    <List datatype="tokens">Infantry</List>
   </GarrisonHolder>
   <Health>
     <Max>2000</Max>
@@ -27,22 +27,36 @@
     <SelectionGroupName>template_structure_military_barracks</SelectionGroupName>
     <Tooltip>Train Infantry and research Infantry technologies.</Tooltip>
     <VisibleClasses datatype="tokens">Village Barracks</VisibleClasses>
-    <Icon>structures/pers_barracks.png</Icon>
-    <RequiredTechnology>phase_village</RequiredTechnology>
+    <Icon>structures/barracks.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>40</wood>
     <stone>20</stone>
   </Loot>
   <Obstruction>
-    <Static width="17.0" depth="17.0"/>
+    <Static width="17.0" depth="17.0" />
   </Obstruction>
-  <Population>
-    <Bonus>10</Bonus>
-  </Population>
-  <ProductionQueue>
+  <ProductionQueue />
+  <Researcher>
+    <Technologies datatype="tokens">
+      barracks_batch_training
+      unlock_champion_infantry
+      pair_unlock_champions_sele
+    </Technologies>
+  </Researcher>
+  <Sound>
+    <SoundGroups>
+      <select>interface/select/building/sel_barracks.xml</select>
+      <constructed>interface/complete/building/complete_barracks.xml</constructed>
+    </SoundGroups>
+  </Sound>
+  <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
+      units/{civ}/infantry_clubman
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_pikeman_b
       units/{civ}/infantry_maceman_b
@@ -60,23 +74,14 @@
       units/{civ}/champion_infantry_slinger
       units/{civ}/champion_infantry_archer
     </Entities>
-    <Technologies datatype="tokens">
-      barracks_batch_training
-      infantry_cost_time
-      unlock_champion_infantry
-      pair_unlock_champions_sele
-    </Technologies>
-  </ProductionQueue>
-  <Sound>
-    <SoundGroups>
-      <select>interface/select/building/sel_barracks.xml</select>
-      <constructed>interface/complete/building/complete_barracks.xml</constructed>
-    </SoundGroups>
-  </Sound>
+  </Trainer>
   <Vision>
     <Range>32</Range>
   </Vision>
   <VisualActor>
     <FoundationActor>structures/fndn_6x6.xml</FoundationActor>
   </VisualActor>
+  <Population>
+    <Bonus>10</Bonus>
+  </Population>
 </Entity>

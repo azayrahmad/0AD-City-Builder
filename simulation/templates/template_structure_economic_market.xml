@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_economic">
+  <Auras datatype="tokens">
+    structures/pop_bonus_market
+  </Auras>
   <AlertRaiser>
     <List datatype="tokens">Trader+!Ship</List>
     <RaiseAlertRange>-1</RaiseAlertRange>
     <EndOfAlertRange>-1</EndOfAlertRange>
     <SearchRange>100</SearchRange>
   </AlertRaiser>
-  <Auras datatype="tokens">
-    structures/pop_bonus_market
-  </Auras>
   <Cost>
-    <Population>4</Population>
     <BuildTime>150</BuildTime>
     <Resources>
       <wood>300</wood>
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="33.0" depth="29.0"/>
+    <Square width="33.0" depth="29.0" />
     <Height>8.0</Height>
   </Footprint>
   <Health>
@@ -31,7 +30,9 @@
     <Classes datatype="tokens">Barter</Classes>
     <VisibleClasses datatype="tokens">Trade Town Market</VisibleClasses>
     <Icon>structures/market.png</Icon>
-    <RequiredTechnology>phase_town</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>60</wood>
@@ -41,20 +42,19 @@
     <InternationalBonus>0.2</InternationalBonus>
   </Market>
   <Obstruction>
-    <Static width="30.0" depth="26.0"/>
+    <Static width="30.0" depth="26.0" />
   </Obstruction>
-  <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
       trader_health
       trade_gain_01
       trade_gain_02
       trade_commercial_treaty
+      unlock_shared_los
+      unlock_shared_dropsites
     </Technologies>
-    <Entities datatype="tokens">
-      units/{civ}/support_trader
-    </Entities>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_market.xml</select>
@@ -68,6 +68,12 @@
     <Radius>40</Radius>
     <Weight>30000</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/support_trader
+    </Entities>
+  </Trainer>
   <Vision>
     <Range>32</Range>
   </Vision>

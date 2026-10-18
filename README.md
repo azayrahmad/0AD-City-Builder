@@ -1,14 +1,71 @@
-# 0AD City Builder
-This mod attempts to emulate city-building elements as in Caesar or SimCity games into 0AD. Available for both 0AD Alpha 23 and Alpha 24.
+# 0 A.D. City Builder Mod
+
+A modification that incorporates city-building and urban planning mechanics into **0 A.D. Empires Ascendant** (compatible with **Alpha 28 / 0.28.0**), inspired by classic Impression Games titles (*Caesar*, *Pharaoh*, *Zeus*) and *SimCity*.
+
+---
+
 ## Overview
-This mod aims to realistically replicate civilian aspects of ancient times depicted in 0AD. Inspired mainly by city building games like Impression Games' Caesar series, but also other games like Europa Barbarorum mods for Total War games, this mod implements features from the games where applicable to 0AD.
-## Features
-1. Bonuses and penalties on placing certain building to encourage realistic building placement and city layout.
-2. Coin as new resource to simulate economy and taxation (currently only for A23).
-3. Unit and building changes to simulate ancient society more closely (WIP).
-## Current State
-Currently feature #1 and #2 is available for 0AD Alpha 23, but only feature #1 is available for Alpha 24.
+
+In standard 0 A.D., buildings are often placed purely for tactical speed, clustering houses or production anywhere there is open ground. The **City Builder Mod** introduces dynamic building auras, zoning influences, and neighborhood mechanics that reward organic, thoughtful urban design while discouraging messy military/industrial sprawl.
+
+---
+
+## Key Features
+
+### 1. Dynamic Housing Desirability & Neighborhoods
+- **Base Housing:** Houses start with lower base capacity (2 population for regular houses, 5 for large houses).
+- **Neighborhood Effect:** Houses placed within proximity of other houses gain **+1 population capacity**, encouraging distinct residential quarters.
+- **Civic Influence:**
+  - **Civil Centres:** Proximity to a Civic Centre boosts nearby house capacity by **+50%**.
+  - **Civic Buildings & Stoas:** Provide **+2 population capacity** to nearby houses.
+  - **Temples:** Religious sanctity provides **+2 population capacity** to nearby houses.
+  - **Markets:** Access to food and goods supplies grants **+1 population capacity** to nearby houses.
+  - **Monuments & Wonders:** Civic pride grants **+1 to +3 population capacity** to nearby houses.
+- **Pollution & Military Penalties:**
+  - **Economic Facilities:** Noise and pollution from Storehouses, Corrals, and Farmsteads reduce nearby house capacity by **-1**.
+  - **Military Structures:** Barracks, Fortresses, and Defense Towers reduce nearby house capacity by **-2**.
+
+### 2. Economic & Production Synergies
+- **Living Near Work:** Workers whose homes are near workplaces gain **+10% gather speed and building rate**.
+- **Logistics Shuttle:** Workers near Farmsteads and Storehouses gain **+1 resource carrying capacity**.
+- **Supply Chains:**
+  - **Corral near Stables:** Horse breeding reduces cavalry training batch time by **10%**.
+  - **Corral near Temples:** Animal sacrifice supply speeds up temple technology research by **10%**.
+  - **Blacksmith Forge near Barracks/Military:** Weapon supply reduces unit training batch time by **10%**.
+  - **Storehouse near Forge:** Raw resource supply reduces forge technology research time by **10%**.
+  - **House near Barracks:** Manpower supply reduces military training batch time by **10%**.
+
+### 3. Environmental & Health Factors
+- **Mine Hazards:** Working in open ore and rock mines causes slow health decay to nearby human workers.
+- **Dense Forests / Groves:** Cavalry units suffer a **20% movement penalty** when navigating dense tree groves.
+- **Paved Infrastructure:** Civic centres and roads grant **+10% movement speed** to nearby units.
+
+### 4. Smart AI City Planning
+- Fully integrated with the **Petra AI**: computer opponents understand aura bonuses and penalties, naturally zoning residential districts near civic centres and cultural monuments while keeping noise and military structures separated.
+
+---
+
+## Installation
+
+1. Copy or clone this repository into your 0 A.D. mods directory:
+   - **Windows:** `%USERPROFILE%\Documents\My Games\0ad\mods\city-building-mod`
+   - **Linux:** `~/.local/share/0ad/mods/city-building-mod`
+   - **macOS:** `~/Library/Application Support/0ad/mods/city-building-mod`
+2. Launch **0 A.D.**
+3. Go to **Settings > Mod Selection**.
+4. Select **City Building Mod - Aura**, click **Enable**, and then click **Save Configuration & Restart**.
+
+---
+
+## Compatibility
+
+- **0 A.D. Version:** Alpha 28 (`0.28.0`)
+- **Dependencies:** `0ad=0.28.0`
+
+---
+
 ## Links
-* [0 AD Official Website](https://play0ad.com/)
-* [0 AD City Builder mod on mod.io](https://0ad.mod.io/city-building-mod)
-* [0 AD City Builder Wildfire Games Forum](https://wildfiregames.com/forum/topic/26701-city-building-mod-a23-a24/)
+
+- [0 A.D. Official Website](https://play0ad.com/)
+- [City Builder on mod.io](https://mod.io/g/0ad/m/city-building-mod)
+- [Wildfire Games Community Forum Thread](https://wildfiregames.com/forum/topic/26701-city-building-mod-a23-a24/)

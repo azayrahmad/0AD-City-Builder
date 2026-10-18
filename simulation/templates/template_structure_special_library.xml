@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_special">
   <Auras datatype="tokens">
     structures/library
@@ -15,7 +15,7 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="29.0" depth="34.0"/>
+    <Square width="29.0" depth="34.0" />
     <Height>9.0</Height>
   </Footprint>
   <Health>
@@ -33,9 +33,8 @@
     <metal>40</metal>
   </Loot>
   <Obstruction>
-    <Static width="25.0" depth="30.0"/>
+    <Static width="25.0" depth="30.0" />
   </Obstruction>
-  <ProductionQueue disable=""/>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_library.xml</select>

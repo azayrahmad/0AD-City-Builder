@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_special">
   <Auras datatype="tokens">
     structures/theater
@@ -8,7 +8,6 @@
     <Category>Theater</Category>
   </BuildRestrictions>
   <Cost>
-    <Population>5</Population>
     <BuildTime>500</BuildTime>
     <Resources>
       <wood>200</wood>
@@ -17,7 +16,7 @@
     </Resources>
   </Cost>
   <Footprint replace="">
-    <Circle radius="25"/>
+    <Circle radius="25" />
     <Height>10.0</Height>
   </Footprint>
   <Health>
@@ -35,9 +34,8 @@
     <metal>40</metal>
   </Loot>
   <Obstruction>
-    <Static width="40" depth="46"/>
+    <Static width="40" depth="46" />
   </Obstruction>
-  <ProductionQueue disable=""/>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_greek_theater.xml</select>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_resource">
   <Auras datatype="tokens">
     structures/train_bonus_corral
+    structures/tech_bonus_corral
   </Auras>
   <Cost>
     <BuildTime>50</BuildTime>
@@ -10,9 +11,17 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="18.0" depth="17.0"/>
+    <Square width="18.0" depth="17.0" />
     <Height>5.0</Height>
   </Footprint>
+  <GarrisonHolder>
+    <Max>8</Max>
+    <EjectHealth>0.5</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Animal</EjectClassesOnDestroy>
+    <List datatype="tokens">Animal</List>
+    <BuffHeal>1</BuffHeal>
+    <LoadingRange>4</LoadingRange>
+  </GarrisonHolder>
   <Health>
     <Max>500</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
@@ -20,29 +29,38 @@
   <Identity>
     <GenericName>Corral</GenericName>
     <SelectionGroupName>template_structure_resource_corral</SelectionGroupName>
-    <Tooltip>Raise Domestic Animals for food.</Tooltip>
+    <Tooltip>Raise Domestic Animals for food. Garrison animals to gain a trickle of food.</Tooltip>
     <VisibleClasses datatype="tokens">Economic Village Corral</VisibleClasses>
     <Icon>structures/corral.png</Icon>
-    <RequiredTechnology>phase_village</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
+  <ResourceTrickle>
+    <Rates>
+      <food>0</food>
+    </Rates>
+    <Interval>5000</Interval>
+  </ResourceTrickle>
   <Loot>
     <wood>20</wood>
   </Loot>
   <Obstruction>
-    <Static width="16.0" depth="15.0"/>
+    <Static width="16.0" depth="15.0" />
   </Obstruction>
-  <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
-    <Entities datatype="tokens">
-      gaia/fauna_goat_trainable
-      gaia/fauna_sheep_trainable
-      gaia/fauna_pig_trainable
-      gaia/fauna_cattle_cow_trainable
-    </Entities>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
       gather_animals_stockbreeding
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Pierce>20</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_corral.xml</select>
@@ -54,6 +72,15 @@
     <Radius>20</Radius>
     <Weight>30000</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      gaia/fauna_goat_trainable
+      gaia/fauna_sheep_trainable
+      gaia/fauna_pig_trainable
+      gaia/fauna_cattle_cow_trainable
+    </Entities>
+  </Trainer>
   <Vision>
     <Range>20</Range>
   </Vision>

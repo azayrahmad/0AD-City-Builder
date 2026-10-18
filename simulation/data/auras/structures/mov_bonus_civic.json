@@ -1,18 +1,22 @@
 {
-	"type": "range",
-	"radius": 50,
-	"affects": ["Unit"],
-	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 },
-		{ "value": "UnitMotion/Run/Speed", "multiply": 1.1 }
-	],
-	"auraName": "Infrastructure",
-	"auraDescription": "Nearby units move +10% faster",
-	"overlayIcon": "art/textures/ui/session/auras/mov_bonus.png",
-    "rangeOverlay" : {
-        "lineTexture": "overlay/dash.png",
-        "lineTextureMask": "overlay/dash_mask.png",
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "Unit"
+    ],
+    "modifications": [
+        {
+            "value": "UnitMotion/WalkSpeed",
+            "multiply": 1.1
+        }
+    ],
+    "auraName": "Infrastructure",
+    "auraDescription": "Paved roads and civic infrastructure grant +10% movement speed.",
+    "overlayIcon": "art/textures/ui/session/auras/mov_bonus.png",
+    "rangeOverlay": {
+        "lineTexture": "overlay/meander.png",
+        "lineTextureMask": "overlay/meander_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_gaia">
   <Auras datatype="tokens">
-    structures/pop_penalty_economy
-	structures/health_decay_mine
+    structures/health_decay_mine
   </Auras>
   <Footprint>
-    <Circle radius="5.0"/>
+    <Circle radius="5.0" />
     <Height>3.5</Height>
   </Footprint>
   <Identity>
@@ -15,17 +14,18 @@
   </Identity>
   <Minimap>
     <Type>metal</Type>
-    <Color r="227" g="159" b="12"/>
+    <Color r="227" g="159" b="12" />
+    <Icon size="16.0">metal.png</Icon>
   </Minimap>
   <Obstruction>
-    <Static width="7.0" depth="7.0"/>
+    <Static width="7.0" depth="7.0" />
   </Obstruction>
   <Position>
     <Anchor>pitch-roll</Anchor>
   </Position>
   <ResourceSupply>
     <KillBeforeGather>false</KillBeforeGather>
-    <Amount>1000</Amount>
+    <Max>1000</Max>
     <Type>metal.ore</Type>
     <MaxGatherers>12</MaxGatherers>
   </ResourceSupply>

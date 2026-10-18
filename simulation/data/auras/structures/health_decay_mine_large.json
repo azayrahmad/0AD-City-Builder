@@ -1,0 +1,22 @@
+{
+    "type": "range",
+    "radius": 60,
+    "affects": [
+        "Human"
+    ],
+    "modifications": [
+        {
+            "value": "Health/RegenRate",
+            "add": -0.01
+        }
+    ],
+    "auraName": "Hazardous",
+    "auraDescription": "Working near open mines poses health risks.",
+    "overlayIcon": "art/textures/ui/session/auras/health_penalty.png",
+    "rangeOverlay": {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+    "stackable": true
+}

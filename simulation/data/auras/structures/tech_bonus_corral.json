@@ -1,0 +1,22 @@
+{
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "Temple"
+    ],
+    "modifications": [
+        {
+            "value": "Researcher/TechCostMultiplier/time",
+            "add": -0.1
+        }
+    ],
+    "auraName": "Sacrifice Supply",
+    "auraDescription": "Animal corral supply speeds up temple rituals and research time by 10%.",
+    "overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+    "rangeOverlay": {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+    "stackable": true
+}

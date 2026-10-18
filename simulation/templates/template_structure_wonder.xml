@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure">
   <Auras datatype="tokens">
     structures/wonder_population_cap
@@ -8,8 +8,7 @@
     <Category>Wonder</Category>
   </BuildRestrictions>
   <Capturable>
-    <CapturePoints>2000</CapturePoints>
-    <RegenRate>5.0</RegenRate>
+    <CapturePoints op="mul">4</CapturePoints>
   </Capturable>
   <Cost>
     <BuildTime>1000</BuildTime>
@@ -20,7 +19,7 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="34.0" depth="34.0"/>
+    <Square width="34.0" depth="34.0" />
     <Height>10.0</Height>
   </Footprint>
   <GarrisonHolder>
@@ -42,36 +41,36 @@
     <Classes datatype="tokens">ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">City Wonder</VisibleClasses>
     <Icon>structures/wonder.png</Icon>
-    <RequiredTechnology>phase_city</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>200</wood>
     <stone>300</stone>
     <metal>200</metal>
   </Loot>
+  <Minimap>
+    <Type>structure</Type>
+    <Icon size="16.0">wonder.png</Icon>
+  </Minimap>
   <Obstruction>
-    <Static width="30.0" depth="30.0"/>
+    <Static width="30.0" depth="30.0" />
   </Obstruction>
-  <ProductionQueue>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
       wonder_population_cap
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>15</Hack>
+        <Hack>19</Hack>
         <Pierce>25</Pierce>
         <Crush>3</Crush>
       </Damage>
     </Entity>
-    <Foundation>
-      <Damage>
-        <Hack>2</Hack>
-        <Pierce>10</Pierce>
-        <Crush>2</Crush>
-      </Damage>
-    </Foundation>
   </Resistance>
   <ResourceTrickle>
     <Rates>
@@ -97,7 +96,7 @@
     <Range>72</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_9x9.xml</FoundationActor>
+    <FoundationActor>structures/fndn_stonehenge.xml</FoundationActor>
   </VisualActor>
-  <Wonder/>
+  <Wonder />
 </Entity>

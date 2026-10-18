@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_gaia">
   <Auras datatype="tokens">
     structures/mov_penalty_tree
   </Auras>
   <Footprint>
-    <Circle radius="2.5"/>
+    <Circle radius="2.5" />
     <Height>15.0</Height>
   </Footprint>
   <Identity>
@@ -14,22 +14,21 @@
   </Identity>
   <Minimap>
     <Type>wood</Type>
-    <Color r="69" g="107" b="68"/>
+    <Color r="69" g="107" b="68" />
   </Minimap>
   <Obstruction>
-    <Static width="1.6" depth="1.6"/>
-    <!-- Trees are deleted as a workaround for gates until random maps are smart enough to not place trees inside walls. -->
+    <Static width="1.6" depth="1.6" />
     <DeleteUponConstruction>true</DeleteUponConstruction>
   </Obstruction>
   <ResourceSupply>
     <KillBeforeGather>false</KillBeforeGather>
-    <Amount>1</Amount>
+    <Max>1</Max>
     <Type>wood.tree</Type>
     <MaxGatherers>8</MaxGatherers>
   </ResourceSupply>
   <Selectable>
     <Overlay>
-      <Outline disable=""/>
+      <Outline disable="" />
       <Texture>
         <MainTexture>128x128/ellipse.png</MainTexture>
         <MainTextureMask>128x128/ellipse_mask.png</MainTextureMask>
@@ -48,7 +47,7 @@
   </StatusBars>
   <VisualActor>
     <SelectionShape>
-      <Footprint/>
+      <Footprint />
     </SelectionShape>
   </VisualActor>
 </Entity>

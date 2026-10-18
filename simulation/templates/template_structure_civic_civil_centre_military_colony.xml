@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_civic_civil_centre">
-  <BuildingAI>
-    <DefaultArrowCount>1</DefaultArrowCount>
-  </BuildingAI>
+  <Auras datatype="tokens">
+    structures/pop_bonus_civcenter
+  </Auras>
   <BuildRestrictions>
     <Territory>own neutral</Territory>
     <Category>Colony</Category>
@@ -11,12 +11,15 @@
       <MinDistance>120</MinDistance>
     </Distance>
   </BuildRestrictions>
+  <BuildingAI>
+    <DefaultArrowCount>1</DefaultArrowCount>
+  </BuildingAI>
   <Cost>
     <BuildTime>300</BuildTime>
     <Resources>
       <wood>200</wood>
       <stone>200</stone>
-      <metal>200</metal>
+      <metal>150</metal>
     </Resources>
   </Cost>
   <Health>
@@ -28,21 +31,22 @@
     <SelectionGroupName>template_structure_civic_civil_centre_military_colony</SelectionGroupName>
     <VisibleClasses datatype="tokens">Colony</VisibleClasses>
     <Icon>structures/military_settlement.png</Icon>
-    <RequiredTechnology>phase_town</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>40</wood>
     <stone>40</stone>
-    <metal>40</metal>
+    <metal>30</metal>
   </Loot>
-  <ProductionQueue>
+  <Researcher>
     <Technologies datatype="tokens">
       -phase_town_{civ}
       -phase_city_{civ}
       -hellenistic_metropolis
-      upgrade_rank_advanced_mercenary
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_gymnasium.xml</select>
@@ -50,6 +54,6 @@
     </SoundGroups>
   </Sound>
   <TerritoryInfluence>
-    <Radius>80</Radius>
+    <Radius>75</Radius>
   </TerritoryInfluence>
 </Entity>

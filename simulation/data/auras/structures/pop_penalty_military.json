@@ -1,17 +1,22 @@
 {
-	"type": "range",
-	"radius": 30,
-	"affects": ["House"],
-	"modifications": [
-		{ "value": "Population/Bonus", "add": -2 }
-	],
-	"auraName": "Military",
-	"auraDescription": "Nearby houses support -2 less population.",
-	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
-    "rangeOverlay" : {
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "House"
+    ],
+    "modifications": [
+        {
+            "value": "Population/Bonus",
+            "add": -2
+        }
+    ],
+    "auraName": "Military",
+    "auraDescription": "Military barracks and fortresses reduce nearby housing desirability by -2 population.",
+    "overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

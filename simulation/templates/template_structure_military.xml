@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure">
   <Auras datatype="tokens">
     structures/pop_penalty_military
   </Auras>
+  <Capturable>
+    <RegenRate>10.0</RegenRate>
+  </Capturable>
   <GarrisonHolder>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
@@ -17,18 +20,11 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>20</Hack>
+        <Hack>24</Hack>
         <Pierce>35</Pierce>
         <Crush>3</Crush>
       </Damage>
     </Entity>
-    <Foundation>
-      <Damage>
-        <Hack>1</Hack>
-        <Pierce>5</Pierce>
-        <Crush>1</Crush>
-      </Damage>
-    </Foundation>
   </Resistance>
   <TerritoryInfluence>
     <Root>false</Root>

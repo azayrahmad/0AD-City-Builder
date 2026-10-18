@@ -1,18 +1,22 @@
 {
-	"type": "range",
-	"radius": 20,
-	"affects": ["House"],
-	"affectedPlayers": ["Enemy", "Player"],
-	"modifications": [
-		{ "value": "Population/Bonus", "add": -1 }
-	],
-	"auraName": "Pollution",
-	"auraDescription": "Nearby houses support -1 less population.",
-	"overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
-    "rangeOverlay" : {
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "House"
+    ],
+    "modifications": [
+        {
+            "value": "Population/Bonus",
+            "add": -1
+        }
+    ],
+    "auraName": "Pollution",
+    "auraDescription": "Industrial dropsites and noisy facilities reduce nearby housing desirability by -1 population.",
+    "overlayIcon": "art/textures/ui/session/auras/pop_penalty.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

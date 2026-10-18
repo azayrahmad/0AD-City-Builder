@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure">
   <Auras datatype="tokens">
     structures/pop_penalty_economy
@@ -7,20 +7,4 @@
     <GenericName>Resource Structure</GenericName>
     <VisibleClasses datatype="tokens">Resource</VisibleClasses>
   </Identity>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack>1</Hack>
-        <Pierce>20</Pierce>
-        <Crush>1</Crush>
-      </Damage>
-    </Entity>
-    <Foundation>
-      <Damage>
-        <Hack>1</Hack>
-        <Pierce>10</Pierce>
-        <Crush>1</Crush>
-      </Damage>
-    </Foundation>
-  </Resistance>
 </Entity>

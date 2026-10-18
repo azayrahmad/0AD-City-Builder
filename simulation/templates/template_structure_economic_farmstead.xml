@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_economic">
-  <AlertRaiser>
-    <List datatype="tokens">FemaleCitizen</List>
-    <RaiseAlertRange>50</RaiseAlertRange>
-    <EndOfAlertRange>100</EndOfAlertRange>
-    <SearchRange>100</SearchRange>
-  </AlertRaiser>  
   <Auras datatype="tokens">
     structures/work_bonus_farmstead
   </Auras>
+  <AlertRaiser>
+    <List datatype="tokens">Civilian</List>
+    <RaiseAlertRange>50</RaiseAlertRange>
+    <EndOfAlertRange>100</EndOfAlertRange>
+    <SearchRange>100</SearchRange>
+  </AlertRaiser>
   <Capturable>
     <CapturePoints>300</CapturePoints>
   </Capturable>
@@ -32,21 +32,30 @@
     <Classes datatype="tokens">DropsiteFood</Classes>
     <VisibleClasses datatype="tokens">Village Farmstead</VisibleClasses>
     <Icon>structures/farmstead.png</Icon>
-    <RequiredTechnology>phase_village</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>20</wood>
   </Loot>
-  <ProductionQueue>
+  <ProductionQueue />
+  <RallyPoint disable="" />
+  <Researcher>
     <Technologies datatype="tokens">
+      pair_gather_food_maur
       gather_wicker_baskets
       gather_farming_plows
       gather_farming_training
+      gather_farming_training_ptol
       gather_farming_fertilizer
+      gather_farming_fertilizer_ptol
+      gather_farming_seed_drill
+      gather_farming_water_weeding
+      gather_farming_chain_pump
       gather_farming_harvester
     </Technologies>
-  </ProductionQueue>
-  <RallyPoint disable=""/>
+  </Researcher>
   <ResourceDropsite>
     <Types>food</Types>
     <Sharable>true</Sharable>

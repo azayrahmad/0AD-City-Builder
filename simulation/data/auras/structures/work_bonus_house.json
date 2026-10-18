@@ -1,18 +1,26 @@
 {
-	"type": "range",
-	"radius": 20,
-	"affects": ["Worker"],
-	"modifications": [
-		{ "value": "Builder/Rate", "multiply": 1.1 },
-		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.1 }
-	],
-	"auraName": "Home Spirit",
-	"auraDescription": "All workers build and gather +10% faster.",
-	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",    
-	"rangeOverlay" : {
+    "type": "range",
+    "radius": 30,
+    "affects": [
+        "Worker"
+    ],
+    "modifications": [
+        {
+            "value": "Builder/Rate",
+            "multiply": 1.1
+        },
+        {
+            "value": "ResourceGatherer/BaseSpeed",
+            "multiply": 1.1
+        }
+    ],
+    "auraName": "Home",
+    "auraDescription": "Workers living close to their workplace build and gather 10% faster.",
+    "overlayIcon": "art/textures/ui/session/auras/food_bonus.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

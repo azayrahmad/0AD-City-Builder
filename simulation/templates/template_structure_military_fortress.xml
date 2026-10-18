@@ -1,24 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_military">
   <Attack>
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Hack>0</Hack>
-        <Pierce>16</Pierce>
-        <Crush>0</Crush>
+        <Pierce>10</Pierce>
       </Damage>
       <MaxRange>60</MaxRange>
-      <MinRange>0</MinRange>
-      <PrepareTime>1200</PrepareTime>
-      <RepeatTime>2000</RepeatTime>
-      <Delay>0</Delay>
+      <MinRange>10</MinRange>
+      <PrepareTime>400</PrepareTime>
+      <RepeatTime>3500</RepeatTime>
       <Projectile>
-        <Speed>100.0</Speed>
-        <Spread>1.5</Spread>
-        <Gravity>50.0</Gravity>
+        <Speed>100</Speed>
+        <Spread>1.25</Spread>
+        <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>
-        <LaunchPoint y="3"/>
+        <LaunchPoint y="3" />
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
       <RangeOverlay>
@@ -28,11 +25,6 @@
       </RangeOverlay>
     </Ranged>
   </Attack>
-  <BuildingAI>
-    <DefaultArrowCount>3</DefaultArrowCount>
-    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
-  </BuildingAI>
   <BuildRestrictions>
     <Category>Fortress</Category>
     <Distance>
@@ -40,9 +32,14 @@
       <MinDistance>80</MinDistance>
     </Distance>
   </BuildRestrictions>
+  <BuildingAI>
+    <DefaultArrowCount>10</DefaultArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
+  </BuildingAI>
   <Capturable>
-    <CapturePoints>4000</CapturePoints>
-    <RegenRate>10.0</RegenRate>
+    <CapturePoints op="mul">8</CapturePoints>
+    <RegenRate>45.0</RegenRate>
   </Capturable>
   <Cost>
     <BuildTime>450</BuildTime>
@@ -52,7 +49,7 @@
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="30.0" depth="30.0"/>
+    <Square width="30.0" depth="30.0" />
     <Height>8.0</Height>
   </Footprint>
   <GarrisonHolder>
@@ -68,28 +65,33 @@
   <Identity>
     <GenericName>Fortress</GenericName>
     <SelectionGroupName>template_structure_military_fortress</SelectionGroupName>
-    <Tooltip>Territory root. Garrison Soldiers for additional arrows.</Tooltip>
+    <Tooltip>Garrison Soldiers for additional arrows.</Tooltip>
     <Classes datatype="tokens">GarrisonFortress</Classes>
-    <VisibleClasses datatype="tokens">Defensive City Fortress</VisibleClasses>
+    <VisibleClasses datatype="tokens">Defensive Fortress</VisibleClasses>
     <Icon>structures/fortress.png</Icon>
-    <RequiredTechnology>phase_city</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>60</wood>
     <stone>120</stone>
   </Loot>
   <Obstruction>
-    <Static width="25.0" depth="25.0"/>
+    <Static width="25.0" depth="25.0" />
   </Obstruction>
-  <Population>
-    <Bonus>15</Bonus>
-  </Population>
-  <ProductionQueue>
-    <BatchTimeModifier>0.8</BatchTimeModifier>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
       attack_soldiers_will
+      tower_murderholes
+      tower_garrison
+      art_of_war
+      poison_arrows
+      poison_blades
+      roman_reforms
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_fortress.xml</select>
@@ -98,15 +100,22 @@
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>
     </SoundGroups>
   </Sound>
+  <TerritoryDecay>
+    <DecayRate op="mul">2</DecayRate>
+  </TerritoryDecay>
   <TerritoryInfluence>
-    <Root>true</Root>
     <Radius>80</Radius>
-    <Weight>40000</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+  </Trainer>
   <Vision>
     <Range>90</Range>
   </Vision>
   <VisualActor>
     <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
   </VisualActor>
+  <Population>
+    <Bonus>15</Bonus>
+  </Population>
 </Entity>

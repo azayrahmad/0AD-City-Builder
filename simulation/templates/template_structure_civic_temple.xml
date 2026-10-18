@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_civic">
   <Auras datatype="tokens">
-    structures/pop_bonus_civic
     structures/temple_heal
+    structures/pop_bonus_temple
   </Auras>
+  <Capturable>
+    <RegenRate>15.0</RegenRate>
+  </Capturable>
   <Cost>
-    <Population>3</Population>
     <BuildTime>200</BuildTime>
     <Resources>
       <stone>300</stone>
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="19.0" depth="31.5"/>
+    <Square width="19.0" depth="31.5" />
     <Height>12.0</Height>
   </Footprint>
   <GarrisonHolder>
@@ -33,28 +35,29 @@
     <Tooltip>Train Healers and research healing technologies.</Tooltip>
     <VisibleClasses datatype="tokens">Town Temple</VisibleClasses>
     <Icon>structures/temple.png</Icon>
-    <RequiredTechnology>phase_town</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <stone>60</stone>
   </Loot>
   <Obstruction>
-    <Static width="17.5" depth="30.0"/>
+    <Static width="17.5" depth="30.0" />
   </Obstruction>
-  <ProductionQueue>
-    <BatchTimeModifier>0.8</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/support_healer_b
-    </Entities>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
+      cost_healer
       heal_range
       heal_range_2
       heal_rate
       heal_rate_2
       garrison_heal
       health_regen_units
+      grove_of_fetters
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_temple.xml</select>
@@ -66,6 +69,12 @@
     <Radius>40</Radius>
     <Weight>30000</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/support_healer_b
+    </Entities>
+  </Trainer>
   <Vision>
     <Range>40</Range>
   </Vision>

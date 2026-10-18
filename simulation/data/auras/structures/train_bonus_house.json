@@ -1,17 +1,22 @@
 {
-	"type": "range",
-	"radius": 20,
-	"affects": ["Military"],
-	"modifications": [
-		{ "value": "ProductionQueue/BatchTimeModifier", "add": -0.1 }
-	],
-	"auraName": "Manpower Supply",
-	"auraDescription": "Nearby military bases train batches of soldiers +10% faster",
-	"overlayIcon": "art/textures/ui/session/auras/build_bonus.png",    
-	"rangeOverlay" : {
+    "type": "range",
+    "radius": 30,
+    "affects": [
+        "Military"
+    ],
+    "modifications": [
+        {
+            "value": "Trainer/BatchTimeModifier",
+            "add": -0.1
+        }
+    ],
+    "auraName": "Manpower",
+    "auraDescription": "Living proximity provides manpower, speeding up nearby military training by 10%.",
+    "overlayIcon": "art/textures/ui/session/auras/pop_bonus.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

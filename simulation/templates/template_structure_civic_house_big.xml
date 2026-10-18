@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_civic_house">
   <Auras datatype="tokens">
-    -structures/pop_bonus_house
     structures/pop_bonus_house_big
     structures/train_bonus_house
     structures/work_bonus_house
@@ -9,11 +8,11 @@
   <Cost>
     <BuildTime>50</BuildTime>
     <Resources>
-      <wood>120</wood>
+      <wood>150</wood>
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="16.0" depth="16.0"/>
+    <Square width="16.0" depth="16.0" />
   </Footprint>
   <GarrisonHolder>
     <Max>6</Max>
@@ -26,10 +25,10 @@
     <wood>30</wood>
   </Loot>
   <Obstruction>
-    <Static width="14.0" depth="14.0"/>
+    <Static width="14.0" depth="14.0" />
   </Obstruction>
   <Population>
-    <Bonus>4</Bonus>
+    <Bonus>5</Bonus>
   </Population>
   <TerritoryInfluence>
     <Radius>20</Radius>

@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_civic">
   <Auras datatype="tokens">
     structures/pop_bonus_house
     structures/train_bonus_house
     structures/work_bonus_house
   </Auras>
-  <Capturable>
-    <CapturePoints>300</CapturePoints>
-    <GarrisonRegenRate>4.0</GarrisonRegenRate>
-  </Capturable>
   <Cost>
-    <Population>0</Population>
     <BuildTime>30</BuildTime>
     <Resources>
       <wood>75</wood>
     </Resources>
   </Cost>
   <Footprint>
-    <Square width="13.0" depth="13.0"/>
+    <Square width="13.0" depth="13.0" />
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
@@ -37,28 +32,29 @@
     <SelectionGroupName>template_structure_civic_house</SelectionGroupName>
     <VisibleClasses datatype="tokens">Village House</VisibleClasses>
     <Icon>structures/house.png</Icon>
-    <RequiredTechnology>phase_village</RequiredTechnology>
+    <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>15</wood>
   </Loot>
   <Obstruction>
-    <Static width="11.0" depth="11.0"/>
+    <Static width="11.0" depth="11.0" />
   </Obstruction>
   <Population>
     <Bonus>2</Bonus>
   </Population>
-  <ProductionQueue>
-    <Entities datatype="tokens">
-      units/{civ}/support_female_citizen_house
-    </Entities>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
-      health_females_01
+      health_civilians_01
       pop_house_01
       pop_house_02
-      unlock_females_house
+      unlock_civilians_house_generic
+      unlock_civilians_house_kush
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_house.xml</select>
@@ -68,14 +64,16 @@
   <StatusBars>
     <HeightOffset>8.0</HeightOffset>
   </StatusBars>
-  <TerritoryDecay>
-    <DecayRate>10</DecayRate>
-  </TerritoryDecay>
   <TerritoryInfluence>
     <Root>false</Root>
     <Radius>16</Radius>
     <Weight>65535</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <Entities datatype="tokens">
+      units/{civ}/support_civilian_house
+    </Entities>
+  </Trainer>
   <Vision>
     <Range>20</Range>
   </Vision>

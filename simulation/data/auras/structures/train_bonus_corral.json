@@ -1,17 +1,22 @@
 {
-	"type": "range",
-	"radius": 30,
-	"affects": ["Stable"],
-	"modifications": [
-		{ "value": "ProductionQueue/BatchTimeModifier", "add": -0.1 }
-	],
-	"auraName": "Horse Supply",
-	"auraDescription": "Nearby stables train batches of cavalry +10% faster",
-	"overlayIcon": "art/textures/ui/session/auras/weapon_bonus.png",
-    "rangeOverlay" : {
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "Stable"
+    ],
+    "modifications": [
+        {
+            "value": "Trainer/BatchTimeModifier",
+            "add": -0.1
+        }
+    ],
+    "auraName": "Horse Supply",
+    "auraDescription": "Corral horse breeding speeds up stable cavalry training time by 10%.",
+    "overlayIcon": "art/textures/ui/session/auras/food_bonus.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

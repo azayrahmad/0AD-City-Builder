@@ -1,17 +1,22 @@
 {
-	"type": "range",
-	"radius": 20,
-	"affects": ["Worker"],
-	"modifications": [
-		{ "value": "ResourceGatherer/Capacities/food", "add": 1 }
-	],
-	"auraName": "Quick Shuttle",
-	"auraDescription": "Nearby workers can carry one more food",
-	"overlayIcon": "art/textures/ui/session/auras/food_bonus.png",
-    "rangeOverlay" : {
+    "type": "range",
+    "radius": 40,
+    "affects": [
+        "Worker"
+    ],
+    "modifications": [
+        {
+            "value": "ResourceGatherer/Capacities/food",
+            "add": 1
+        }
+    ],
+    "auraName": "Quick Shuttle",
+    "auraDescription": "Farmstead proximity allows workers to carry +1 additional food.",
+    "overlayIcon": "art/textures/ui/session/auras/food_bonus.png",
+    "rangeOverlay": {
         "lineTexture": "overlay/dash.png",
         "lineTextureMask": "overlay/dash_mask.png",
         "lineThickness": 0.1
     },
-	"stackable": "true"
+    "stackable": true
 }

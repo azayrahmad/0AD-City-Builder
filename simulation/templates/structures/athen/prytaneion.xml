@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Entity parent="template_structure_special">
   <Auras datatype="tokens">
+    structures/athen_prytaneion_hero_heal
     structures/pop_bonus_civic
   </Auras>
   <BuildRestrictions>
     <Category>Council</Category>
   </BuildRestrictions>
   <Cost>
-    <Population>3</Population>
     <BuildTime>200</BuildTime>
     <Resources>
       <stone>100</stone>
@@ -15,7 +15,7 @@
     </Resources>
   </Cost>
   <Footprint replace="">
-    <Circle radius="16.0"/>
+    <Circle radius="16.0" />
     <Height>8.0</Height>
   </Footprint>
   <Health>
@@ -35,20 +35,15 @@
     <metal>40</metal>
   </Loot>
   <Obstruction>
-    <Static width="24.0" depth="30.0"/>
+    <Static width="24.0" depth="30.0" />
   </Obstruction>
-  <ProductionQueue>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/hero_themistocles
-      units/{civ}/hero_pericles
-      units/{civ}/hero_iphicrates
-    </Entities>
+  <ProductionQueue />
+  <Researcher>
     <Technologies datatype="tokens">
       long_walls
-      iphicratean_reforms
+      ostracism
     </Technologies>
-  </ProductionQueue>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_tholos.xml</select>
@@ -60,6 +55,14 @@
     <Radius>38</Radius>
     <Weight>40000</Weight>
   </TerritoryInfluence>
+  <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/hero_themistocles
+      units/{civ}/hero_pericles
+      units/{civ}/hero_iphicrates
+    </Entities>
+  </Trainer>
   <Vision>
     <Range>40</Range>
   </Vision>
