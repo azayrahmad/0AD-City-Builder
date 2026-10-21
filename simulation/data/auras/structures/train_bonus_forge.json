@@ -1,5 +1,6 @@
 {
     "type": "range",
+    "static": true,
     "radius": 40,
     "affects": [
         "Military"

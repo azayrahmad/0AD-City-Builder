@@ -1,5 +1,6 @@
 {
     "type": "range",
+    "static": true,
     "radius": 30,
     "affects": [
         "House"
